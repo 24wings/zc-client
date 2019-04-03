@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>订单</title>
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/materPhone.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/orderAlert.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <style>
+        .dlregion1 {
+            top: 33px!important;
+            left: 0;
+            width: 100%!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <dl>
+            <dd class="dd1">
+                <span>收货人</span>
+                <input class="userName" type="text">
+            </dd>
+            <dd class="dd2">
+                <span>手机号</span>
+                <input class="userPhone" type="text">
+            </dd>
+            <dd class="dd3">
+                <span>所在地</span>
+                <input onclick="regionClick()" class="region" readonly="readonly" type="text" value="">
+                <dl class="dlregion1"></dl>
+            </dd>
+            <dd class="dd4">
+                <span class="fl">详细地址</span>
+                <textarea class="address"></textarea>
+            </dd>
+            <dd class="dd3 ddt3">
+                <span>邮编</span>
+                <input class="zipCode" type="text">
+            </dd>
+            <dd class="dd3">
+                <span>默认地址</span>
+                <input type="radio" value="1" checked name="isDefault">
+                <label for="">是</label>
+                <input type="radio" value="2" name="isDefault">
+                <label for="">否</label>
+            </dd>
+        </dl>
+        <div onclick="btnOrder()" class="ddbtn">
+            确定
+        </div>
+    </div>
+</body>
+
+</html>

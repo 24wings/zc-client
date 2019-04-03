@@ -1,0 +1,6 @@
+.newsDetailsCon h1,.newsDetailsCon p{text-align: center;}
+.newsDetailsCon h1{font-size: 1.4rem;padding-top: 1rem}
+.newsDetailsCon p{font-size: .9rem;color: #9f9f9f}
+.newsDetailsCon ul li{color: #888;font-size: 1rem;text-indent: 1.6rem}
+.newsDetailsCon{background: white;margin-top: 1rem}
+.newsDetailsCon ul{padding-bottom: 1rem}

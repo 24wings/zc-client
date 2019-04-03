@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>众筹订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/materPhone.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/materPhone.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+
+<body>
+    <nav>确认订单</nav>
+    <div class="container raiseCon">
+        <div class="shipAddress">
+            <div>
+                <h5>
+                    <span class="span1">收货地址</span>
+                    <span class="fr cursor span2" onclick="addAddress()"><img src="img/addAddressIcon.png" height="14" width="14" alt="">使用新地址</span>
+                </h5>
+                <dl class="borderDldd">
+                    <!-- <dd>
+                        <input type="radio" name="address">
+                        <p>湖北省武汉市洪山区书城路（阿皮收）15612345678</p>
+                        <em>
+                            <span>修改地址</span>
+                            <span>删除</span>
+                        </em>
+                    </dd> -->
+                </dl>
+            </div>
+
+        </div>
+        <div class="heightf6"></div>
+    </div>
+    <div class="heightf66"></div>
+    <div class="container raiseDivCon">
+        <h4>确认订单信息</h4>
+        <input type="hidden" class="singleNumber">
+        <input type="hidden" class="singlePrice">
+        <ul>
+            <li class="lili1 fl">
+                <div class="navimg bgcenter fl">
+                </div>
+                <div class="navinfo fl">
+                    <p class="tdTitle"></p>
+                    <p>众筹类型：实物众筹</p>
+                </div>
+            </li>
+            <li>
+                <p>
+                    <span>众筹单价</span>
+                    <span class="fr">
+                        ￥<span class="materSinglePrice "></span>
+                    </span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <span>众筹份数</span>
+                    <span class="fr">
+                        <input value="1" onblur="txtfocus()" class="raiseUnit copies textRights"  onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" type="text" value="">
+                    </span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <span>众筹总金额</span>
+                    <span class="fr">
+                        <input type="text" readonly="readonly" class="amount textRights">
+                    </span>
+                </p>
+            </li>
+            <li>
+                <p>
+                    <span>备注：</span>
+                    <span class="fr">
+                        <input type="text">
+                    </span>
+                </p>
+            </li>
+        </ul>
+        <div class="textRight">
+            我已阅读了解并自愿承担相应风险
+        </div>
+    </div>
+    <div class="subbtn">
+        <div>
+            <span>共支付金额：￥</span>
+            <input type="text" readonly="readonly" class="amount">
+        </div>
+        <div onclick="submitBtn1()">
+            提交订单
+        </div>
+    </div>
+</body>
+
+</html>

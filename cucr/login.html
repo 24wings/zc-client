@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录/注册</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+
+</head>
+<body style="overflow-x: hidden;">
+    <!-- 头部 -->
+    <div class="app-head clear" >
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html?userId=10002549">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="head-nav fr">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="loginNav">
+        <img src="img/5.png" alt="">
+        <div class="container loginNavCon">
+            <div class="loginNavConC">
+                <h1>sign in</h1>
+                <h6>登录</h6>
+                <div class="phoneNum">
+                    <input type="text" placeholder="请输入手机号">
+                </div>
+                <!-- <div class="qrNum">
+                    <input type="text" placeholder="请输入验证码">
+                    <span>获取验证码</span>
+                </div> -->
+                <div class="pwdNum">
+                    <input type="password" placeholder="请输入密码">
+                </div>
+                <div class="loginBtn" onclick="loginSub()">登录</div>
+                <div class="loginChange">
+                    <a href="registered.html">注册</a>
+                    <a onclick="changePwd()" href="#">修改密码</a>
+                </div>
+                <p class="agreep">登录即表示同意《服务协议》</p>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+</html>

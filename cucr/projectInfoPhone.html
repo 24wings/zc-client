@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <title>项目详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/projectInfoPhone.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <link rel="stylesheet" href="css/shareCon.min.css">
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/shareCon.min.js"></script>
+    <script src="js/projectInfoPhone.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/jquery.page.js"></script>
+    <script src="js/base64.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+<body>
+    <div class="navdivs">
+        <img class="loginlogo" src="img/logo.png" alt="">
+        <img class="imgNav" src="" alt="">
+    </div>
+    <div class="container">
+        <div class="divInfoCon">
+            <ul>
+                <li>
+                    <!-- <span>项目名称：</span> -->
+                    <span class="liName"></span>
+                </li>
+                <!-- <li>
+                    <span>所属公司：</span>
+                    <span class="companyName"></span>
+                </li>
+                <li>
+                    <span>项目编号：</span>
+                    <span class="projectNo"></span>
+                </li> -->
+                <li class="moneyLi">
+                    <span>
+                        <span>已筹集金额</span>
+                        <span>
+                            ￥<span class="totalPrice"></span>
+                        </span>
+                    </span>
+                    <span>
+                        <span>当前进度</span>
+                        <span class="jdspan"></span>
+                    </span>
+                </li>
+                <li class="proInfodd3">
+                    <div></div>
+                </li>
+                <div class="row row3div">
+                    <div>
+                        <h1 class="amount"></h1>
+                        <h2>目标金额(元)</h2>
+                    </div>
+                    <div>
+                        <h1 class="surplus"></h1>
+                        <h2>剩余时间(天)</h2>
+                    </div>
+                    <div>
+                        <h1 class="totalPerson"></h1>
+                        <h2>支持人数(人)</h2>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <div class="height1rem"></div>
+    <div class="container">
+        <h1 class="raiseH1">项目详情</h1>
+        <div class="border1rem"></div>
+        <div class="proCon1"></div>
+    </div>
+    <div class="height1rem"></div>
+    <div class="container">
+        <h1 class="raiseH1">项目动态</h1>
+        <div class="border1rem"></div>
+        <dl class="dlddInfo4"></dl>
+    </div>
+    <div class="height1rem"></div>
+    <div class="container">
+        <h1 class="raiseH1">项目评论</h1>
+        <div class="border1rem"></div>
+        <dl class="commentsDl"></dl>
+    </div>
+    <div class="explain">
+        <h2 class="explain-h2">风险提示</h2>
+        <p class="explain-p">1.&nbsp;众筹并非商品交易，项目存在一定风险，如项目筹款成功但发放回报出现问题，您可申请退款退回支持金额（一次性支付，按项目组织者约定比例以首笔款+尾款方式付至项目组织者账户）中的尾款部分，而首笔款部分由于已被项目组织者使用，退还首笔款事宜需要您与项目组织者自行协商，您可能会承担首笔款无法退回的损失。后期如对项目组织者的处理仍有疑问，可申请淘宝客服介入。</p>
+        <p class="explain-p">2.&nbsp;请在支持项目后15分钟内付款哦，否则您的支持请求会被自动关闭。</p>
+        <p class="explain-p">3.&nbsp;本页面统计的项目总支持人数和总支持金额存在一定的延迟，以单个回报详情为准。 </p>
+        <b></b>
+    </div>
+    <button class="supBtn container" onclick="supportBtn()">
+        <div>立即支持</div>
+    </button>
+</body>
+</html>

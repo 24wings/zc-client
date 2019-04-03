@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html  class="iframe-h">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>网站后台管理模版</title>
+        <script src="./static/admin/js/jquery1.8.3.js"></script>
+        <script src="./static/admin/js/requestDefinition.js"></script>
+        <script src="./static/admin/js/jquery.page.js"></script>
+        <link rel="stylesheet" type="text/css" href="./static/admin/layui/css/layui.css"/>
+        <link rel="stylesheet" type="text/css" href="./static/admin/css/admin.css"/>
+        <link rel="stylesheet" type="text/css" href="./static/admin/css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="./static/admin/css/adminManage.css"/>
+        <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+        <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    </head>
+    <style>
+    .tdImg>img{width: 140px}
+    .select{color: #4bdced;}
+    .cons2,.cons3{display:none}
+    .tabli>li{    float: left;
+    text-align: center;
+    height: 40px;
+    padding: 0 30px;cursor: pointer;}
+    </style>
+    <body  class="iframe-h">
+    <div class="wrap-container email-wrap clearfix">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="email-content">
+                    <div class="email-content-title layui-form">
+                        <span class="write-title">众筹金额</span>
+                    </div>
+                    <div class="email-tool-btn clearfix">
+                        <div class="col-lg-6 email-tool-btn-right">
+                            <div class="layui-form-item" style="display:none">
+                                <div class="layui-inline">
+                                    <input type="text" name="title" required lay-verify="required" placeholder="搜索邮件标题" autocomplete="off" class="layui-input">
+                                </div>
+                                <div class="layui-inline">
+                                    <button class="layui-btn layui-btn-normal search-btn">搜索</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <button onclick="addUserBtn()" style="margin-left:15px" class="layui-btn layui-btn-small layui-btn-normal addBtn hidden-xs"><i class="layui-icon">&#xe654;</i></button> -->
+                    <ul class="tabli">
+                        <li class="select">实物支持</li>
+                        <li>定额支持</li>
+                        <li>股份支持</li>
+                    </ul>
+                    <div>
+                        <div class="layui-form email-list cons cons1">
+                            <table class="layui-table" lay-even lay-skin="nob">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="200">
+                                    <col>
+                                    <col class="hidden-xs" width="150">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>序</th>
+                                        <th>参与人</th>
+                                        <th>项目名称</th>
+                                        <th>图片</th>
+                                        <th>参与金额</th>
+                                        <th>时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyList1">
+                                </tbody>
+                            </table>
+                            <div class="tcdPageCode1 fr"></div>
+                            <div id="email-page" style="text-align: center;"></div>
+                        </div>
+                        <div class="layui-form email-list cons cons2">
+                            <table class="layui-table" lay-even lay-skin="nob">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="200">
+                                    <col>
+                                    <col class="hidden-xs" width="150">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>序</th>
+                                        <th>参与人</th>
+                                        <th>项目名称</th>
+                                        <th>图片</th>
+                                        <th>参与金额</th>
+                                        <th>回报金额</th>
+                                        <th>时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyList2">
+                                </tbody>
+                            </table>
+                            <div class="tcdPageCode2 fr"></div>
+                            <div id="email-page" style="text-align: center;"></div>
+                        </div>
+                        <div class="layui-form email-list cons cons3">
+                            <table class="layui-table" lay-even lay-skin="nob">
+                                <colgroup>
+                                    <col width="50">
+                                    <col width="200">
+                                    <col>
+                                    <col class="hidden-xs" width="150">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>序</th>
+                                        <th>参与人</th>
+                                        <th>项目名称</th>
+                                        <th>图片</th>
+                                        <th>参与金额</th>
+                                        <th>回报金额</th>
+                                        <th>时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbodyList3">
+                                </tbody>
+                            </table>
+                            <div class="tcdPageCode3 fr"></div>
+                            <div id="email-page" style="text-align: center;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./static/admin/layui/layui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./static/admin/js/adminAmount.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

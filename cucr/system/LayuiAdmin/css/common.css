@@ -1,0 +1,74 @@
+*{margin: 0;padding: 0}
+html{width: 100%;height: 100%}
+@media (min-width: 376px) and (max-width: 414px) {
+  html{font-size: 12px;}
+}
+@media (min-width: 415px) and (max-width: 639px) {
+  html{font-size: 14px;}
+}
+@media (min-width: 640px) and (max-width: 719px) {
+  html{font-size: 15px;}
+}
+@media (min-width: 720px) and (max-width: 749px) {
+  html{font-size: 16px;}
+}
+@media (min-width: 750px) and (max-width: 799px) {
+  html{font-size: 17px;}
+}
+@media (min-width: 800px) and (max-width: 992px) {
+  html{font-size: 21px;}
+}
+@media (min-width: 993px) and (max-width: 1366px) {
+  html{font-size: 21px;}
+}
+@media (min-width: 1366px) and (max-width:1920px) {
+  html{font-size: 21px;}
+}
+.fl{float: left;}
+.fr{float: right;}
+.clear{clear: both;}
+.tcdPageCode>a,.tcdPageCode>span,.tcdPageCode1>a,.tcdPageCode1>span,.tcdPageCode2>a,.tcdPageCode2>span,.tcdPageCode3>a,.tcdPageCode3>span,.tcdPageCode4>a,.tcdPageCode4>span,.tcdPageCode5>a,.tcdPageCode5>span,.tcdPageCode6>a,.tcdPageCode6>span{
+display:inline-block;
+width: 1.2rem;
+height: 1.2rem;
+line-height: 1.2rem;
+font-size: .8rem;
+text-decoration: none;
+color: #333;
+background: white;
+text-align: center;cursor: pointer;border-radius: 4px;-moz-user-select:none; /*火狐*/
+ -webkit-user-select:none; /*webkit浏览器*/
+ -ms-user-select:none; /*IE10*/
+ -khtml-user-select:none; /*早期浏览器*/
+ user-select:none;margin: 0 .1rem}
+ .tcdPageCode>a:hover,.tcdPageCode>span:hover,.tcdPageCode1>a:hover,.tcdPageCode1>span:hover,.tcdPageCode2>a:hover,.tcdPageCode2>span:hover,.tcdPageCode3>a:hover,.tcdPageCode3>span:hover,.tcdPageCode4>a:hover,.tcdPageCode4>span:hover,.tcdPageCode5>a:hover,.tcdPageCode5>span:hover,.tcdPageCode6>a:hover,.tcdPageCode6>span:hover{
+    background: #4bdced;
+    color: white!important
+ }
+  .current{    background: #47DBED!important;
+    color: white!important;}
+.tcdPageCode>span,.tcdPageCode>a{float: left;}
+.textalign{text-align: center;}
+.navTitle{font-size: .8rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    margin-top: .8rem;
+    border-bottom: 2px solid #4bdced;font-weight: 500}
+ table{width: 100%;border: 1px solid #bbb;margin-bottom: 2rem}
+.status{width: 20px!important}
+body{padding: 0 1rem}
+.addAdminConBtn{    border: 0 none;
+    background: transparent;
+    font-size: .8rem;
+    color: #666;
+    outline: none;
+    cursor: pointer;}
+.addAdminCon>div{float: left;width: 100%;margin-bottom: 1rem}
+a:hover{text-decoration: none!important;}
+table td{    font-size: .9rem;
+    padding: .2rem .4rem;}
+.btnAdmin{background: transparent;
+    border: 0 none;
+    font-size: .8rem;
+    padding: 0 1rem;cursor: pointer;color: #666;display: inline-block;}
+.btnAdmin:hover,.addAdminConBtn:hover{color: #4bdced}

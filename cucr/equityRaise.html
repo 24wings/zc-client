@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>股权众筹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/fileinput.css">
+    <link rel="stylesheet" href="css/projectRaise.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/laydate.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/fileinput.js"></script>
+    <script src="js/equityRaise.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear" >
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+   
+    <div class="container aProject" style="display:block">
+        <div class="aProjectdiv1">
+             股权众筹
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目名称</span>
+                    <input class="name" type="text" value="">
+                </dd>
+                <dd>
+                    <span>项目所在地</span>
+                    <input class="region" onclick="regionClick()" type="text" readonly="readonly">
+                    <dl class="dlregion1"></dl>
+                    <!-- 省份和城市 -->
+                    <input type="hidden" class="provinceid">
+                    <input type="hidden" class="cityid">
+                </dd>
+                <dd>
+                    <span>项目封面</span>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
+                                <div class="fileinput-new thumbnail" style="width: 200px;height: auto;max-height:150px;">
+                                    <img id='picImg' style="width: 100%;height: auto;max-height: 140px;" src="" alt="" />
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                <div>
+                                <span class="btn btn-primary btn-file" style="background: white;border: 0;">
+                                <span class="fileinput-new">选择图片</span>
+                                <span class="fileinput-exists">换一张</span>
+                                    <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png" />
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div id="uploadSubmit" class="btn btn-info" style="color:#ad8f5f;display: block;text-align: left;text-indent: 9rem;">确定图片</div> -->
+                    </form>
+                </dd>
+                <dd style="display:none">
+                    <span>项目视频</span>
+                    <input class="videoid" type="text">
+                </dd>
+                <dd>
+                    <span>简要说明</span>
+                    <input class="explain" type="text">
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目筹资金额</span>
+                    <input class="amount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">元
+                </dd>
+                <dd style="display:none">
+                    <span>开始时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon startTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>截止时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon endTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>项目标签</span>
+                    <input class="lable" type="text">
+                </dd>
+                <dd>
+                    <span>单人投资最低金额</span>
+                    <input class="minmoney" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">元
+                </dd>
+                <dd>
+                    <span>最大支持人数</span>
+                    <input class="supportcount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">人
+                </dd>
+                <dd style="display:none">
+                    <span>是否推荐项目</span>
+                    <input type="radio" class="isrecomm1" name="isrecomm" value="1"/>
+                    <label>是</label>
+                    <input type="radio" class="isrecomm2" name="isrecomm" value="2" />
+                    <label>否</label> 
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv2" style="display:none ">
+            <dl> 
+                <dd style="display:none">
+                    <span>筹集天数</span>
+                    <input class="days" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">天
+                </dd>
+                <dd>
+                    <span>企业员工人数</span>
+                    <input class="employeesnum" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">人
+                </dd>
+                <dd>
+                    <span>融资金额</span>
+                    <input class="pamount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">元
+                </dd>
+                <dd>
+                    <span>出让股份</span>
+                    <input class="shares" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')"  type="text">%
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目详情</span>
+                    <textarea class="details" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>成功回报时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon repaidday" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>回报方式</span>
+                    <input type="radio" class="mode" onclick="modeS()" name="mode" value="1" checked="checked" />
+                    <label>按份回报</label>
+                    <input type="radio" class="mode" onclick="modeH()" name="mode" value="2" />
+                    <label>按出资比例回报</label> 
+                </dd>
+                <dd class="modeSH">
+                    <span>共发布份数</span>
+                    <input type="text" class="copies">
+                </dd>
+                <dd class="modeSH">
+                    <span>单份金额</span>
+                    <input type="text" class="single">
+                </dd>
+                <dd class="modeSH">
+                    <span>单人最大投资份数</span>
+                    <input type="text" class="maxcopies">
+                </dd>
+                <dd>
+                    <span>出资比例回报系数</span>
+                    <input class="repaycoeff" type="text">
+                </dd>
+                <dd>
+                    <span>按份回报金额</span>
+                    <input class="sharemoney" type="text">
+                </dd>
+                <dd>
+                    <span>是否分红</span>
+                    <input type="radio" class="isbonus" name="isbonus" value="1" checked="checked" />
+                    <label>是</label>
+                    <input type="radio" class="isbonus" name="isbonus" value="2" />
+                    <label>否</label> 
+                </dd>
+                <dd>
+                    <span>分红金额</span>
+                    <input class="bonusmoney" type="text">
+                </dd>
+                <dd>
+                    <span>回报内容</span>
+                    <textarea class="content" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+            <div class="raiseSend">
+                <div class="raiseSendBtn cursor" onclick="sendEquery()">
+                    发布众筹项目
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+</html>

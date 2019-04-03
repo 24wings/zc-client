@@ -1,0 +1,477 @@
+/* 样式重置 */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    border-bottom: 0;
+    color: #212529
+}
+
+a:hover {
+    text-decoration: none!important;
+    color: #000
+}
+
+ul,
+ol {
+    margin: 0
+}
+
+li {
+    list-style: none
+}
+
+input {
+    outline: none
+}
+
+ul li,
+ol li {
+    list-style: none;
+}
+
+body {
+    background: #f6f6f6;
+}
+
+textarea,
+input {
+    outline: none
+}
+
+.frimpor {
+    float: right!important;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.displaynone {
+    display: none
+}
+
+.clear {
+    clear: both;
+}
+
+p {
+    margin: 0
+}
+
+.flwidth {
+    float: left;
+    width: 100%;
+}
+
+
+/* 头部 */
+
+.app-head {
+    width: 100%
+}
+
+.beard1>li {
+    float: left;
+    margin: 0 1.6rem
+}
+
+.app-head {
+    background: white
+}
+
+.app-head-img,
+.app-head,
+.app-head-inner {
+    height: 5rem
+}
+
+.app-head-img img {
+    height: 60%;
+    margin-top: 8%;
+    margin-right: 20px;
+}
+
+.beard1,
+.nav-list {
+    margin-top: 1.5rem
+}
+
+.beard1 li a:hover {
+    border-bottom: 2px solid #ad8f5f;
+    color: #ad8f5f;
+}
+
+.beardActive a {
+    border-bottom: 2px solid #ad8f5f;
+    color: #ad8f5f;
+}
+
+.swiper-slide img {
+    width: 100%
+}
+
+.bgcenter {
+    background-position: center;
+    background-size: cover
+}
+
+.row {
+    width: 100%;
+    margin-left: 0
+}
+
+@media screen and (max-width: 780px) {
+    .app-head-img {
+        display: none;
+    }
+    .beard1 li,
+    .nav-list li {
+        font-size: 1.1rem
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .beard2 {
+        display: none
+    }
+}
+
+.app-foot {
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    background: #474e5d;
+    clear: both;
+    margin-top: 30px;
+    color: #ccc
+}
+
+.app-foot p {
+    text-align: center;
+    margin: .6rem 0
+}
+
+.app-foot ul {
+    height: 30px;
+}
+
+.app-foot ul li {
+    display: inline;
+    font-size: 14px
+}
+
+.app-foot ul li a {
+    font-size: 14px;
+    color: #ccc
+}
+
+.app-foot ul li a:hover {
+    color: #ad8f5f
+}
+
+.app-foot p {
+    font-size: 14px
+}
+
+.tjmore>div {
+    height: 2rem
+}
+
+.index-board-item-inner-left {
+    width: 100%;
+    height: 6rem
+}
+
+.tjp1 {
+    font-size: 1.2rem;
+    border-left: 3px solid #ad8f5f;
+    text-indent: 10px;
+    color: #666
+}
+
+.tjp2 {
+    font-size: .8rem;
+    color: #666;
+    margin-top: 8px
+}
+
+.index-board-item-inner-left {
+    height: 10rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.index-board-item-inner-left p {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #ff9701;
+    padding: .2rem .4rem;
+    color: white;
+    font-size: 12px;
+}
+
+.index-board-div1 h2 {
+    font-size: 16px;
+    font-weight: 900;
+    color: #333;
+    margin: .4rem 0;
+}
+
+.index-board-div1 h2:hover {
+    color: #ad8f5f;
+}
+
+.index-board-div1 h3 {
+    width: 15%;
+    height: .3rem;
+    background: #ad8f5f;
+    border-radius: 10px;
+}
+
+.tjmore div {
+    margin: 10px 0;
+}
+
+.index-board-item-inner-right {
+    padding: 10px;
+    margin-bottom: 1rem;
+    background: #faf6f3
+}
+
+.index-board-item-inner-right1 {
+    background: white!important
+}
+
+.index-board-div1 dl {
+    float: left;
+    width: 100%
+}
+
+.index-board-div1 dl dd {
+    float: left;
+    width: 33.3%
+}
+
+.index-board-div1 dl dd:nth-child(2) {
+    border-left: 1px solid #e6ddcf;
+    border-right: 1px solid #e6ddcf;
+}
+
+.index-board-div1 dl dd p {
+    text-indent: .6rem;
+    font-size: 14px
+}
+
+.index-board-div1 dl dd p:nth-child(2) {
+    color: #bbb;
+    font-size: 12px
+}
+
+.index-board-div1 p {
+    font-size: .8rem
+}
+
+.beard1 li a {
+    font-size: 16px;
+    padding-bottom: .4rem;
+}
+
+.pagination li {
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    background: white;
+    margin-left: 4px;
+}
+
+.pagination {
+    float: right;
+    margin-bottom: 1rem;
+}
+
+.nav-list {
+    position: relative;
+    border: 1px solid #666;
+    padding: .2rem 2rem;
+    border-radius: 1rem;
+}
+
+.nav-list>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.userLogin {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    position: relative;
+    margin-top: .5rem
+}
+
+.userLogin a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.divqrck {
+    width: 7rem;
+    text-align: center;
+    color: #666;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 8px;
+    margin: 0 auto;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 3rem
+}
+
+.layui-layer-btn0 {
+    color: white!important
+}
+
+.tcdPageCode>a,
+.tcdPageCode>span,
+.tcdPageCode1>a,
+.tcdPageCode1>span,
+.tcdPageCode2>a,
+.tcdPageCode2>span,
+.tcdPageCode3>a,
+.tcdPageCode3>span,
+.tcdPageCode4>a,
+.tcdPageCode4>span,
+.tcdPageCode5>a,
+.tcdPageCode5>span,
+.tcdPageCode6>a,
+.tcdPageCode6>span,
+.tcdPageCode7>a,
+.tcdPageCode7>span,
+.tcdPageCode8>a,
+.tcdPageCode8>span,
+.tcdPageCode9>a,
+.tcdPageCode9>span {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    background: #ececec;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    -moz-user-select: none;
+    /*火狐*/
+    -webkit-user-select: none;
+    /*webkit浏览器*/
+    -ms-user-select: none;
+    /*IE10*/
+    -khtml-user-select: none;
+    /*早期浏览器*/
+    user-select: none;
+    margin: 0 .1rem
+}
+
+.tcdPageCode>a:hover,
+.tcdPageCode>span:hover,
+.tcdPageCode1>a:hover,
+.tcdPageCode1>span:hover,
+.tcdPageCode2>a:hover,
+.tcdPageCode2>span:hover,
+.tcdPageCode3>a:hover,
+.tcdPageCode3>span:hover,
+.tcdPageCode4>a:hover,
+.tcdPageCode4>span:hover,
+.tcdPageCode5>a:hover,
+.tcdPageCode5>span:hover,
+.tcdPageCode6>a:hover,
+.tcdPageCode6>span:hover,
+.tcdPageCode7>a:hover,
+.tcdPageCode8>span:hover,
+.tcdPageCode9>span:hover {
+    background: #ad8f5f;
+    color: white!important;
+    text-decoration: none
+}
+
+.current {
+    background: #ad8f5f!important;
+    color: white;
+}
+
+.displayNone {
+    display: none
+}
+
+.tcdPageCode7>a,
+.tcdPageCode7>span,
+.tcdPageCode8>a,
+.tcdPageCode8>span,
+.tcdPageCode9>a,
+.tcdPageCode9>span {
+    background: #faf6f3
+}
+
+#editor {
+    height: 500px!important
+}
+
+#edui1_iframeholder {
+    height: 360px!important
+}
+
+.textalign {
+    text-align: center;
+}
+
+.raiseListHtml {
+    margin-top: 50px
+}
+
+.tcdPageCode8,
+.tcdPageCode9 {
+    margin-top: 40px;
+    margin-left: 16px;
+    margin-bottom: 100px;
+}
+
+.userLogin {
+    float: right;
+}
+
+.initiateDiv {
+    float: left;
+    margin-right: 50px;
+    margin-top: 28px;
+    cursor: pointer;
+}
+
+.divase {
+    color: #ad8e5f!important;
+    padding-left: 6px;
+    font-size: 16px;
+}

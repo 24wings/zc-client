@@ -1,0 +1,12 @@
+/*.tbodyList>tr>td:nth-child(4){min-width: 200px}*/
+.recommendiv{display: table;margin: 0 auto;margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: .8rem;}
+.recommenBtn>button{background: #1E9FFF;
+    color: white;
+    padding: 4px 28px;
+    outline: none;
+    border: 0 none;
+    border-radius: 4px;}
+.recommenBtn{display: table;margin: 0 auto}
+.labelr{margin-right: 14px}

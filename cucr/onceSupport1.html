@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>立即支持</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/onceSupport.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/onceSupport1.js"></script>
+    <!-- https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <style>
+        body {
+            background: white
+        }
+        
+        .divcon>span {
+            text-align: right;
+            display: inline-block;
+            font-size: 16px;
+            color: #666;
+        }
+        
+        .divcon {
+            margin: 20px 0;
+        }
+        
+        .divbtn1 {
+            width: 100px;
+            margin: 0 auto;
+            background: #ad8f5f;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            color: white;
+            float: right;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            border-radius: 4px;
+        }
+        
+        .divbtn:hover {
+            background: #46c5d4;
+        }
+        
+        .container1,
+        .container2,
+        .container3 {
+            border: 1px solid #ded2bf;
+            margin-top: 20px;
+            position: relative;
+        }
+        
+        .tabli {
+            height: 4rem;
+        }
+        
+        .select1 {
+            color: #ad8f5f
+        }
+        
+        .tabli li {
+            float: left;
+            width: 33%;
+            text-align: center;
+            height: 4rem;
+            line-height: 4rem;
+            cursor: pointer;
+        }
+        
+        .divbtndiv {
+            float: right;
+        }
+        
+        .divcontent1 {
+            display: inline-block;
+            width: 70%
+        }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 20px;
+            color: #ad8f5f;
+            font-weight: 600;
+        }
+        
+        .projectName {
+            font-size: 18px;
+            color: #666;
+            border: 0 none;
+            background: transparent;
+        }
+        
+        .copies,
+        .copies2,
+        .copies3,
+        .amount3 {
+            width: 100px;
+            border: 1px solid #ded2bf;
+            text-align: center;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 2px;
+            margin-left: 15px;
+        }
+        
+        .amount,
+        .amount2 {
+            border: 0 none;
+            font-size: 20px;
+            color: #ff6a36;
+        }
+        
+        .container3 {
+            margin-bottom: 20px
+        }
+        
+        .fh {
+            margin-left: 15px;
+            margin-right: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <ul class="container tabli">
+        <li class="select1 noneli1">实物支持</li>
+        <li class="noneli2">定额支持</li>
+        <li class="noneli3">股份支持</li>
+    </ul> -->
+    <div>
+        <div class="container con container1 noneli1" id="content">
+            <div class="divcontent1">
+                <input type="hidden" class="projectId">
+                <!-- 
+                <input type="hidden" class="moneyInput"> -->
+                <input type="hidden" class="materialId">
+                <input type="hidden" class="quotaId">
+                <input type="hidden" class="stockId">
+                <h3>实物支持</h3>
+                <div class="divcon">
+                    <input type="text" readonly="readonly" class="projectName">
+                </div>
+                <!-- 实物单份金额 -->
+                <input type="hidden" class="singlePrice">
+                <!-- 实物发行份数 -->
+                <input type="hidden" class="singleNumber">
+                <div class="divcon">
+                    <span>支持份数</span>
+                    <input type="text" value="1" onkeyup="this.value=this.value.replace(/^0/g,'')" class="copies" onchange="txtfocus()">
+                </div>
+                <div class="divcon">
+                    <span>出资金额</span>
+                    <span class="fh">￥</span>
+                    <input type="text" class="amount" readonly="readonly">
+                </div>
+            </div>
+            <div class="divbtndiv">
+                <div class="divbtn1" onclick="submitBtns1()">支持</div>
+            </div>
+        </div>
+        <div class="container con container2 noneli2">
+            <div class="divcontent1">
+                <h3>定额支持</h3>
+                <div class="divcon">
+                    <input type="text" readonly="readonly" class="projectName">
+                </div>
+                <!-- 定额单份金额 -->
+                <input type="hidden" class="singlePrice2">
+                <!-- 定额发行份数 -->
+                <input type="hidden" class="singleNumber2">
+                <div class="divcon">
+                    <span>支持份数</span>
+                    <!-- <input type="text" value="1" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" class="copies2" onchange="txtfocus2()"> -->
+                    <input type="text" value="1" onkeyup="this.value=this.value.replace(/^0/g,'')" class="copies2" onchange="txtfocus2()">
+                </div>
+                <div class="divcon">
+                    <span>出资金额</span>
+                    <span class="fh">￥</span>
+                    <input type="text" class="amount2" readonly="readonly">
+                </div>
+            </div>
+            <div class="divbtndiv">
+                <div class="divbtn1" onclick="submitBtns2()">支持</div>
+            </div>
+        </div>
+        <div class="container con container3 noneli3">
+            <div class="divcontent1">
+                <h3>股份支持</h3>
+                <div class="divcon">
+                    <input type="text" readonly="readonly" class="projectName">
+                </div>
+                <div class="divcon">
+                    <span>出资金额</span>
+                    <input type="text" onkeyup="clearNoNum(this)" class="amount3">
+                </div>
+            </div>
+            <div class="divbtndiv">
+                <div class="divbtn1" onclick="submitBtns3()">支持</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

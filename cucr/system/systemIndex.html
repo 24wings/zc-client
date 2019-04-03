@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <link rel="stylesheet" href="css/systemIndex.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <!-- https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js -->
+    <script src="js/systemIndex.js"></script>
+</head>
+<body>
+    <div class="systemNav">
+        <div class="systemNavCdiv">
+            <h2>后台管理系统</h2>
+        </div>
+        <div class="systemNavr fr">
+            <div class="systemNavUser">后台管理员</div>
+            <div onclick="editPwd()">修改密码</div>
+            <div class="systemNavSign" onclick="logOut()">退出登录</div>
+        </div>
+    </div>
+    <div class="systemBorder"></div>
+    <div class="systemCon clear">
+        <div class="systemConl fl">
+            <ul>
+                <li class="select">管理员管理</li>
+                <li>banner图片管理</li>
+            </ul>
+        </div>
+        <div class="systemConc"></div>
+        <div class="systemConr fr">
+            <iframe class="if" src="addAdmin.html" frameborder="0"></iframe>
+            <iframe class="if" src="systemBanner.html" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>

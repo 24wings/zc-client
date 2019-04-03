@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>立即支持</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/onceSupport.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <style>
+        .divcon1 {
+            display: table;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        
+        .divcon2 {
+            display: table;
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 20px
+        }
+        
+        .divbtn {
+            width: 100px;
+            margin: 0 auto;
+            background: #ad8f5f;
+            text-align: center;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            color: white
+        }
+        
+        .divbtn:hover {
+            background: #46c5d4;
+        }
+        
+        input {
+            text-indent: 8px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="id">
+        <input type="hidden" class="projectId">
+        <div class="divcon1">
+            <span>项目名称：</span>
+            <input type="text" class="projectName" readonly="readonly">
+        </div>
+        <div class="divcon2">
+            <span>出资金额：</span>
+            <input type="text" class="amount">
+        </div>
+        <div class="divbtn">
+            <div onclick="submitBtn()">提交</div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function submitBtn() {
+        var projectId = $(".projectId").val();
+        var datas = {
+            "option": "add",
+            "userId": localStorage.userId,
+            "projectId": projectId,
+            "amount": $(".amount").val(),
+            // "mode":"3",
+            "copies": ""
+        }
+        console.log(datas);
+        if ($(".projectId").val() == "" || $(".amount").val() == "") {
+            layer.msg('信息填写完整');
+        } else {
+            layer.confirm('是否提交？', {
+                btn: ['是', '否'] //按钮
+            }, function() {
+                $.ajax({
+                    cache: true,
+                    url: cucr + "/api/ClzcProjectPartake",
+                    type: "POST",
+                    data: datas,
+                    async: true,
+                    error: function(request) {
+                        return;
+                    },
+                    success: function(data) {
+                        if (data.success == "y") {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                            window.parent.location.reload();
+                            layer.msg('支持成功');
+                        }
+                    }
+                })
+            }, function() {
+                layer.msg('支持失败');
+            })
+        }
+
+
+    }
+</script>

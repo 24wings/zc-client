@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/personal.css">
+    <link rel="stylesheet" href="/css/fileinput.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/personal.js"></script>
+    <script src="js/laydate.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/phoneCode.js"></script>
+    <script src="js/jquery.page.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="./js/ajax-tool.js"></script>
+    <script src="js/fileinput.js"></script>
+    <style>
+        .proInfodd3 {
+            height: .3rem;
+            background: #e2d6c6;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: .6rem 0;
+        }
+        
+        .proInfodd3>div {
+            height: 100%;
+            background: #ad8f5f;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear">
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 中间部分 -->
+    <div class="container personalContent">
+        <div class=" personalCon">
+            <div class="personalConl fl">
+                <ul>
+                    <li class="personalConlli1">
+                        <div class="bgcenter"></div>
+                    </li>
+                    <li class="personalConlli2">
+                        <!-- <p></p> -->
+                    </li>
+                    <li class="personalConlli3">
+                        <!-- <div>发起项目</div> -->
+                        <style>
+
+                        </style>
+                        <div>
+                            <a class="diva" href="projectRaise.html">发起项目</a>
+                            <span class="cw" onclick="cwfnshow()">成为项目经理</span>
+                        </div>
+                    </li>
+                    <p class="pborder"></p>
+                </ul>
+                <dl class="personalConldl">
+                    <dd class="personalConldd1 selectBr selectBr0">
+                        <img src="img/personal01.png" height="24" width="24" alt="">
+                        <span>个人中心</span>
+                    </dd>
+                    <dd class="personalConldd2" onclick="messageCenter(1)"><img src="img/message01.png" height="24" width="24" alt=""><span>消息中心</span></dd>
+                    <dd class="personalConldd3"><img src="img/support01.png" height="24" width="24" alt=""><span>已支持的项目</span></dd>
+                    <dd class="personalConldd4" onclick="initiateList(1)"><img src="img/launch01.png" height="24" width="24" alt=""><span>已发起的项目</span></dd>
+                    <dd class="personalConldd5" onclick="collectionList(1)"><img src="img/collect01.png" height="24" width="24" alt=""><span>已收藏的项目</span></dd>
+                    <dd class="personalConldd6" onclick="historicalRecord(1)"><img src="img/examine01.png" height="24" width="24" alt=""><span>我的历史浏览</span></dd>
+                    <dd class="personalConldd7" onclick="submitAudit(1)"><img src="img/history01.png" height="24" width="24" alt=""><span>提交审核的项目</span></dd>
+                </dl>
+            </div>
+            <div class="personalConr fr">
+                <div class="personalCon1">
+                    <div class="connav">
+                        <span class="connavspan1 connavselect">个人资料</span>
+                        <span class="connavspan2">账号安全</span>
+                    </div>
+                    <div class="conspan1">
+                        <!-- <div class="conspan1photo bgcenter headImg cursor" onclick="layerPhoto()">
+                        </div> -->
+                        <p class="conspan1username">
+
+                        </p>
+                        <dl class="conspan1dl">
+                            <dd>
+                                <span>用户姓名</span>
+                                <input type="text" class="userName" value="">
+                            </dd>
+                            <dd>
+                                <span>用户昵称</span>
+                                <input style="width: 38%" type="text" class="nickName" value="">
+                            </dd>
+                            <dd>
+                                <span>用户性别</span>
+                                <input type="radio" class="gender1" name="gender" value="1" />
+                                <label>男</label>
+                                <input type="radio" class="gender2" name="gender" value="2" />
+                                <label>女</label>
+                            </dd>
+                            <dd style="position: relative;">
+                                <span>所在地区</span>
+                                <input onclick="regionClick()" class="region" readonly="readonly" type="text" value="">
+                                <dl class="dlregion1"></dl>
+                            </dd>
+                            <dd>
+                                <span>详细地址</span>
+                                <input class="address" type="text" value="">
+                            </dd>
+                            <dd>
+                                <span>身份证号</span>
+                                <input class="idcard" type="text" value="">
+                            </dd>
+
+                            <div class="yhk">
+                                <div class="bankCard-title">银行卡信息
+                                    <div class="bankCard-title-right">
+                                        <span>添加银行卡</span>
+                                        <img src="./img/f1.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="yhk-box">
+                                    <dd>
+                                        <span>银行卡</span>
+                                        <input class="address" type="text" value="">
+                                    </dd>
+                                    <dd>
+                                        <span>所属银行</span>
+                                        <input class="idcard" type="text" value="">
+                                    </dd>
+                                    <dd>
+                                        <span>所属人</span>
+                                        <input class="address" type="text" value="">
+                                    </dd>
+                                    <div class="sc">
+                                        <div class="sc-box">
+                                            <input type="radio" name="defaults" value="1" checked="checked" />
+                                            <label>设为默认</label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+
+
+
+
+                            <dd class="conspan1Btn">
+                                <div class="cursor" onclick="saveDates()">保存</div>
+                                <div class="cursor" onclick="logOutClick()">退出登录</div>
+                            </dd>
+                            <!-- <dd class="logOut">
+                                <div onclick="logOutClick()">退出登录</div>
+                            </dd> -->
+                            <input type="text" style="display:none" class="provinceId">
+                            <input type="text" style="display:none" class="cityId">
+                            <input type="text" style="display:none" class="areaId">
+                        </dl>
+                        <div class="sfzimg">
+                            <p>身份证正面</p>
+                            <div class="sfzimg-box">
+                                <img src="./img/v1.png" alt="">
+                            </div>
+
+                            <p>身份证反面</p>
+                            <div class="sfzimg-box">
+                                <img src="./img/v2.png" alt="">
+                            </div>
+                            <p>身份证照片要求</p>
+                            <p>1、必须本人的有效身份证，与基本信息一致。<br> 2、照片确保身份证边框完整，字体清晰，亮度均匀。<br> 3、照片要救5M以内，支持jpg/jpeg/png格式。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="conspan2">
+                        <p>修改账号密码</p>
+                        <dl>
+                            <dd>
+                                <span>手机号</span>
+                                <input class="phone" type="text" value="">
+                            </dd>
+                            <dd>
+                                <span>验证码</span>
+                                <input class="phoneNewCode" type="text" value="">
+                                <div class="divqrck" onclick="verificationCode(this)">获取验证码</div>
+                            </dd>
+                            <dd>
+                                <span>新密码</span>
+                                <input class="phoneNewPwd" required="required" type="password" value="">
+                            </dd>
+                            <dd class="conspan1Btn">
+                                <div onclick="editPwd()" style="color:white;margin-bottom: 24rem">保存</div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="personalCon2">
+                    <div class="connav">
+                        <span class="connav2span1 connavselect">评论</span>
+                        <span class="connav2span2">私信</span>
+                    </div>
+                    <div class="con2span1">
+                        <dl>
+
+                        </dl>
+                        <div class="tcdPageCode4"></div>
+                    </div>
+                    <div class="con2span2">
+                        <dl>
+                            <!-- <dd>
+                                <ul class="con2span1ul fl">
+                                    <li class="con2span1li1 bgcenter" style="background-image:url(img/4.jpg)"></li>
+                                    <li class="con2span1li2">路桥川</li>
+                                    <li class="con2span1li3">08-21 8:08</li>
+                                </ul>
+                                <p>Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它非常容易学习，非常容易与其它库或已有项目整合。另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用。</p>
+                                <div class="clear"></div>
+                                <div class="fl hhdivp">
+                                    <p class="fr">回复</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div style="display:none" class="textCon">
+                                    <textarea class="" rows="5"></textarea>
+                                    <div class="fl sendText">
+                                        <div class="fr">发送</div>
+                                    </div>
+                                </div>
+                            </dd> -->
+                        </dl>
+                        <div class="tcdPageCode3"></div>
+                    </div>
+                </div>
+                <div class="personalCon3">
+                    <ul class="container tabli">
+                        <li class="select1 noneli1">实物支持</li>
+                        <li class="noneli2">定额支持</li>
+                        <li class="noneli3">股份支持</li>
+                    </ul>
+                    <div>
+                        <div class="conrow rows1">
+                            <div class="row">
+
+                            </div>
+                            <div class="tcdPageCode7"></div>
+                        </div>
+                        <div class="conrow rows2">
+                            <div class="row">
+
+                            </div>
+                            <div class="tcdPageCode8"></div>
+                        </div>
+                        <div class="conrow rows3">
+                            <div class="row">
+
+                            </div>
+                            <div class="tcdPageCode9"></div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="personalCon4">
+                    <h4>已发起的项目</h4>
+                    <div class="row">
+
+                        <!-- <div class="index-board-item  col-xl-4" >
+                            <div class="index-board-item-inner flwidth">
+                                <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/2.jpg)">
+                                    <p>众筹中</p>
+                                </div>
+                                <div class="index-board-item-inner-right flwidth">
+                                    <div class="index-board-div1">
+                                        <h2>项目1</h2>
+                                        <h3></h3>
+                                        <dl>
+                                            <dd>
+                                                <p>15%</p>
+                                                <p>已达</p>
+                                            </dd>
+                                            <dd>
+                                                <p>100元</p>
+                                                <p>已筹</p>
+                                            </dd>
+                                            <dd>
+                                                <p>10天</p>
+                                                <p>剩余时间</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div> -->
+                    </div>
+                    <div class="tcdPageCode6"></div>
+                </div>
+                <div class="personalCon5">
+                    <h4>已收藏的项目</h4>
+                    <div class="row">
+                        <!-- <div class="index-board-item  col-xl-4" >
+                            <div class="index-board-item-inner flwidth">
+                                <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/3.jpg)">
+                                    <p>众筹中</p>
+                                </div>
+                                <div class="index-board-item-inner-right flwidth">
+                                    <div class="index-board-div1">
+                                        <h2>项目1</h2>
+                                        <h3></h3>
+                                        <dl>
+                                            <dd>
+                                                <p>15%</p>
+                                                <p>已达</p>
+                                            </dd>
+                                            <dd>
+                                                <p>100元</p>
+                                                <p>已筹</p>
+                                            </dd>
+                                            <dd>
+                                                <p>10天</p>
+                                                <p>剩余时间</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="tcdPageCode2"></div>
+                </div>
+                <div class="personalCon6">
+                    <h4>我的历史浏览</h4>
+                    <div class="row">
+                        <!-- <div class="index-board-item  col-xl-4" >
+                            <div class="index-board-item-inner flwidth">
+                                <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                                    <p>众筹中</p>
+                                </div>
+                                <div class="index-board-item-inner-right flwidth">
+                                    <div class="index-board-div1">
+                                        <h2>项目1</h2>
+                                        <h3></h3>
+                                        <dl>
+                                            <dd>
+                                                <p>15%</p>
+                                                <p>已达</p>
+                                            </dd>
+                                            <dd>
+                                                <p>100元</p>
+                                                <p>已筹</p>
+                                            </dd>
+                                            <dd>
+                                                <p>10天</p>
+                                                <p>剩余时间</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="tcdPageCode5"></div>
+                </div>
+                <div class="personalCon7">
+                    <h4>需提交审核的项目</h4>
+                    <div class="row personalCon7con">
+                        <!-- <div class="index-board-item  col-xl-4" >
+                            <div class="index-board-item-inner flwidth">
+                                <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                                </div>
+                                <div class="index-board-item-inner-right flwidth">
+                                    <div class="index-board-div1">
+                                        <h2>项目1</h2>
+                                        <h3></h3>
+                                        <dl>
+                                            <dd>
+                                                <p>15%</p>
+                                                <p>已达</p>
+                                            </dd>
+                                            <dd>
+                                                <p>100元</p>
+                                                <p>已筹</p>
+                                            </dd>
+                                            <dd>
+                                                <p>10天</p>
+                                                <p>剩余时间</p>
+                                            </dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="tcdPageCode1"></div>
+                    <!-- <div class="pageDiv">
+                        <div onclick="pageprev()">«</div>
+                        <ul>
+                            
+                        </ul>
+                        <div onclick="pagenext()">»</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 发起项目模块 -->
+    <div class="aProject container">
+        <div class="aProject1">
+            <p>我有一个梦想，有创意项目，有创意产品，点击发布回报众筹</p>
+            <a href="projectRaise.html">发布项目众筹</a>
+        </div>
+        <div class="aProject2">
+            <p>我有创业梦想，有融资需求，点击发布股权众筹</p>
+            <a href="equityRaise.html">发布股权众筹</a>
+        </div>
+
+    </div>
+
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+
+
+
+    <!-- 申请成为项目经理 模态 -->
+    <div class="applyFor-model">
+        <div class="applyFor-model-box">
+            <div class="applyFor-model-box-title">
+                <h2>申请项目经理</h2>
+                <img src="./img/sd1.png" alt="" onclick="cwfnheid()">
+            </div>
+            <div class="applyFor-model-box-left">
+                <div class="applyFor-model-box-left-box">
+                    <label for="">申请公司</label>
+                    <input type="text" id="sqgs">
+                    <ul class="xl">
+                    </ul>
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="applyFor-model-box-left-box">
+                    <label for="">申请人</label>
+                    <input type="text" id="sqsqr">
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="applyFor-model-box-left-box">
+                    <label for="">申请简介</label>
+                    <textarea name="" id="sqjj"></textarea>
+                    <div class="clearfloat"></div>
+                </div>
+                <div class="applyFor-model-box-left-box">
+                    <label for="">手机</label>
+                    <input type="text" id="sqsj">
+                    <div class="clearfloat"></div>
+                </div>
+                <!-- <div class="applyFor-model-box-left-box">
+                    <label for="">个人资质</label>
+                    <input type="text" id="zz">
+                </div> -->
+            </div>
+            <div class="applyFor-model-box-right">
+                <p>个人资质</p>
+                <div class="applyFor-model-box-right-img">
+                    <img src="" alt="" class="applyFor-show">
+                    <img src="./img/h2.png" alt="" class="applyFor-bg">
+                    <p>点击上传</p>
+                    <input type="file" class="zzfile">
+                </div>
+                <p>个人资质可上传个人相关职称文件、相关获奖证书， 此项为选填项，可不上传。
+                </p>
+            </div>
+            <div class="applyFor-model-btn-box">
+                <div class="applyFor-btn-qd" onclick="jl()">确定</div>
+                <div class="applyFor-btn-qx" onclick="cwfnheid()">取消</div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+    </style>
+
+
+</body>
+
+</html>

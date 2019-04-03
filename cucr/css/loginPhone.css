@@ -1,0 +1,30 @@
+.loginlogo{    width: 66%;
+    display: table;
+    margin: 0 auto;
+    margin-top: 12vw;
+    margin-bottom: 14vw}
+.phoneNum>input,.pwdNum>input{    width: 80%;
+    margin: 0 auto;
+    display: table;
+    border: 1px solid #cbbda3;
+    margin-top: 6vw;
+    height: 12vw;
+    text-align: center;
+    border-radius: 12vw;}
+.loginBtn{background: #a99067;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    border: 1px solid #cbbda3;
+    margin-top: 6vw;
+    height: 12vw;
+    text-align: center;
+    border-radius: 12vw;
+    line-height: 12vw;
+    color: white;}
+.loginChange>p{    color: #bbb;
+    font-size: 10px;width: 80%;
+    margin: 0 auto;
+    margin-top: 8vw;}
+html{height: 100%;background: white}
+.container{background: white}

@@ -1,0 +1,47 @@
+.loginNav{margin-bottom: -30px;position: relative;}
+.loginNav>img{width: 100%;}
+.loginNavCon{width:20rem;
+    background: white;
+    position: absolute;
+    top: 10rem;
+    right: 20%; }
+.loginNavConC{padding: 3rem}
+.loginNavConC h1{font-size: 3rem;
+    margin-top: 1rem;
+    color: #666;}
+.loginNavConC h6{font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 2.6rem;}
+.phoneNum{width: 100%}
+.phoneNum input{width: 100%;
+    border: 0 none;
+    outline: none;
+    font-size: 1rem;
+    border-bottom: 1px solid #999;}
+.qrNum{width: 100%;    margin-top: 2rem;
+    margin-bottom: 2rem;}
+.qrNum>input{width: 58%;border: 0 none;
+    outline: none;
+    font-size: 1rem;
+    border-bottom: 1px solid #999;}
+.qrNum>span{margin-left: 2%;width: 40%;font-size: 1rem;cursor: pointer;}
+.loginBtn{background: #ad8f5f;
+    color: white;
+    text-align: center;
+    font-size: 1.05rem;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 4px;
+    cursor: pointer;}
+.agreep{text-align: center;font-size: .6rem;margin-top: 1rem;margin-bottom: 1rem}
+.pwdNum{width: 100%;    margin-top: 2rem;
+    margin-bottom: 2rem;}
+.pwdNum>input{width: 100%;border: 0 none;
+    outline: none;
+    font-size: 1rem;
+    border-bottom: 1px solid #999;}
+.loginChange{margin-top: .5rem;margin-bottom: 0}
+.loginChange>a{    display: inline-block;
+    width: 48%;
+    text-align: center;
+    font-size: .8rem;}

@@ -1,0 +1,14 @@
+.tdImg>img{width: 140px}
+.addAdminConAl1{width: 80%;margin: 0 auto}
+/*.listTablePhoto{clear: both;
+    width: 100%;}*/
+th{border:0 none!important;}
+.listTablePhotos tr td{border: 0 none}
+.listTablePhotos tbody>tr:nth-child(even){background: #f2f2f2}
+#uploadForm{margin-left: 20px}
+.spanCon{font-size: .8rem;    width: 140px;
+    display: inline-block;
+    text-align: right;}
+.addAdminConAl1{font-size: .8rem}
+.imgdivcon{margin: 10px 0}
+.tdaddproject{cursor: pointer;}

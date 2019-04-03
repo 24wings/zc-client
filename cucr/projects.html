@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <title>项目</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/jquery.page.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear">
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor"><a href="index.html">主页</a></li>
+                    <li class="cursor beardActive"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+
+            <div class="head-nav fr">
+            </div>
+        </div>
+    </div>
+    <!-- 中间部分 -->
+    <div class="container projects">
+        <dl class="fl projectsdl">
+            <dt>状态：</dt>
+            <dd onclick="raiseAll()" class="projectSelect">全部</dd>
+            <dd onclick="raiseProcess()">众筹中</dd>
+            <dd onclick="raiseSuccess()">众筹成功</dd>
+            <dd onclick="raiseError()">众筹失败</dd>
+            <dd onclick="raiseComplete()">已结束众筹</dd>
+        </dl>
+        <div class="fr searchin">
+            <input class="searchInput" type="text" placeholder="请输入关键词">
+            <span class="searchSpan" onclick="projectSearch(1)">搜索</span>
+        </div>
+    </div>
+    <!-- 推荐项目 -->
+    <div class="index-board-list container">
+        <div class="row rowPagesCon">
+
+            <!-- <a href="projectInfo.html" class="index-board-item  col-xl-3" >
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                        <p>众筹中</p>
+                    </div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>项目1</h2>
+                            <h3></h3>
+                            <dl>
+                                <dd>
+                                    <p>15%</p>
+                                    <p>已达</p>
+                                </dd>
+                                <dd>
+                                    <p>100元</p>
+                                    <p>已筹</p>
+                                </dd>
+                                <dd>
+                                    <p>10天</p>
+                                    <p>剩余时间</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </a> -->
+
+        </div>
+        <!-- 分页 -->
+        <div class="pagination tcdPageCode">
+
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function() {
+        UrlSearch()
+    })
+
+    function UrlSearch() {
+        var name, value;
+        var str = location.href; //取得整个地址栏
+        var num = str.indexOf("?")
+        str = str.substr(num + 1); //取得所有参数   stringvar.substr(start [, length ]
+
+        var arr = str.split("&"); //各个参数放到数组里
+        console.log(arr)
+        for (var i = 0; i < arr.length; i++) {
+            num = arr[i].indexOf("=");
+            if (num > 0) {
+                name = arr[i].substring(0, num);
+                value = arr[i].substr(num + 1);
+                this[name] = value;
+            }
+        }
+    }
+</script>

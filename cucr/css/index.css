@@ -1,0 +1,34 @@
+.tjmore p a{font-size: 0.9rem;
+    color: #888;}
+.swiper-slide{position: relative;}
+.swiper-slide a{display: block;width: 100%;height: 100%;position: absolute;top: 0;left: 0}
+
+.noviceDiv{height:78px!important;
+    margin: 0 auto!important;display: table;
+    margin-top: 2rem!important;}
+.noviceDiv1{
+    height:78px!important;}
+.noviceDiv1>img{height: 100%}
+.noviceDiv2{cursor: pointer;position: relative;margin: 18px 0!important;
+    height: 65px;
+    width: 152px;
+    background-size: contain;}
+.noviceDiv2>a{display: inline-block;width: 100%;height: 100%;position: absolute;
+    left: 0;}
+.raiseListHtml>.row>a{color:#212529!important}
+.indexRasie{margin: 1rem 0;
+    height: 2rem;}
+.tjp2>a{font-size: .8rem;
+    color: #666;
+    margin-top: 8px;}
+.index-board-item-inner-left-index{height: 14rem!important}
+.cumulative{background: white}
+.cumulative>dl{padding: 30px 0;}
+.cumulative>dl>dd{    display: inline-block;
+    width: 24%;}
+.cumulative>dl>dd>p{text-align: center;}
+.cumulative>dl>dd>p>span{}
+.borderRight{border-right: 1px solid #e6ddcf;}
+.p666{color: #666;color: 24px}
+.p999{color: #999;color: 18px}
+.p666>span{font-size: 34px}

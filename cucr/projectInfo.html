@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <title>项目详情</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/projectInfo.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <link rel="stylesheet" href="css/shareCon.min.css">
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/shareCon.min.js"></script>
+    <script src="js/projectInfo.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/jquery.page.js"></script>
+    <script src="js/base64.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear">
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor"><a href="index.html">主页</a></li>
+                    <li class="cursor beardActive"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 中间部分 -->
+    <div class="container">
+        <!-- <div class="auditDiv">项目众筹</div>
+        <div class="equityDiv">股权众筹</div> -->
+        <div class="projectInfoConT fl">
+            <!-- <div class="projectInfoConTl fl bgcenter" style="background-image:url(img/1.jpg)"></div>
+            <div class="projectInfoConTr fr">
+                <h1>项目标题</h1>
+                <dl>
+                    <dd class="proInfodd1">已筹到</dd>
+                    <dd class="proInfodd2">
+                        <span>￥</span>
+                        <span>123</span>
+                    </dd>
+                    <dd class="proInfodd3">
+                        <div style="width:70%"></div>
+                    </dd>
+                    <dd class="proInfodd4">
+                        <span>当前进度为<i>70%</i></span>
+                        <span>目标金额￥<em>1000</em></span>
+                    </dd>
+                    <dd class="proInfodd5 fl">
+                        <div class="fl">
+                            <p><span>96</span>天</p>
+                            <p>剩余时间</p>
+                        </div>
+                        <div class="fr">
+                            <p><span>123</span>位</p>
+                            <p>支持者</p>
+                        </div>
+                    </dd>
+                    <div class="clear"></div>
+                    <dd class="proInfodd6">
+                        <div>立即支持</div>
+                    </dd>
+                    
+                </dl>
+            </div> -->
+            <div class="proInfodd7 fl" style="display:none">
+                <div class="share fl">
+                    <div class="fl">分享到</div>
+                    <div class="social-share fl" data-sites="weibo,qq,wechat"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="projectInfoConC">
+            <div class="projectInfoConCl fl">
+                <p>
+                    <span class="proNav1 borderStyle">项目详情</span>
+                    <span class="proNav3">项目动态</span>
+                    <span class="proNav2">项目评论(<span class="pageSpan"></span>)</span>
+                </p>
+                <div class="proCon1">
+                    <!-- <h4>vue的重要性</h4>
+                    <span>2018-08-18</span>
+                    <img src="img/2.jpg" alt="">
+                    <p>Vue.js（读音 /vjuː/, 类似于view）是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。另一方面，Vue 完全有能力驱动采用单文件组件和Vue生态系统支持的库开发的复杂单页应用。</p>
+                    <p>Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它非常容易学习，非常容易与其它库或已有项目整合。另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用。</p> -->
+                </div>
+                <div class="proCon2 fl">
+                    <textarea rows="5" class="proConBtnTxt"></textarea>
+                    <div class="fl proConBtn">
+                        <div class="fl sendks">可输入150字</div>
+                        <div class="fr sendText" onclick="questionProject()">发送</div>
+                    </div>
+                    <div class="clear"></div>
+                    <dl class="commentsDl">
+                        <!-- <dd>
+                            <ul class="con2ddul fl">
+                                <li class="bgcenter con2ddli1" style="background-image:url(img/3.jpg)"></li>
+                                <li class="con2ddli2">林洛雪</li>
+                                <li class="con2ddli3">08-21 8:08</li>
+                            </ul>
+                            <p>Vue.js 自身不是一个全能框架——它只聚焦于视图层。因此它非常容易学习，非常容易与其它库或已有项目整合。另一方面，在与相关工具和支持库一起使用时，Vue.js 也能完美地驱动复杂的单页应用。</p>
+                            <div class="clear"></div>
+                            <div class="con2ddBtn fl">
+                                <p>回复</p>
+                            </div>
+                            <div class="clear"></div>
+                            <div style="display:none">
+                                <textarea class="childtext" rows="5"></textarea>
+                                <div class="fl proConBtn">
+                                    <div class="fr sendText">发送</div>
+                                </div>
+                            </div>
+                        </dd> -->
+
+                    </dl>
+                    <div class="tcdPageCode"></div>
+                </div>
+                <div class="proCon3">
+                    <div class="projectInfoConCrChild001 fl">
+                        <!-- <ul class="divUlSupport">
+                            <li class="select">实物支持</li>
+                            <li>定额支持</li>
+                            <li>股份支持</li>
+                        </ul> -->
+                        <div>
+                            <!-- <div class="divliSupport divliSupport1">
+                                <dl class="titleNav">
+                                    <dt>参与人</dt>
+                                    <dt>份数</dt>
+                                    <dt>总金额</dt>
+                                    <dt>时间</dt>
+                                </dl>
+                                <dl class="dlddInfo2">
+                                </dl>
+                                <div class="tcdPageCode2"></div>
+                            </div>
+                            <div class="divliSupport divliSupport2">
+                                <dl class="titleNav">
+                                    <dt>参与人</dt>
+                                    <dt>份数</dt>
+                                    <dt>总金额</dt>
+                                    <dt>时间</dt>
+                                </dl>
+                                <dl class="dlddInfo3">
+                                </dl>
+                                <div class="tcdPageCode3"></div>
+                            </div>
+                            <div class="divliSupport divliSupport3">
+                                <dl class="titleNav">
+                                    <dt>参与人</dt>
+                                    <dt>总金额</dt>
+                                    <dt>时间</dt>
+                                </dl>
+                                <dl class="dlddInfo4">
+                                </dl>
+                                <div class="tcdPageCode4"></div>
+                            </div> -->
+                            <dl class="dlddInfo4">
+                            </dl>
+                            <div class="tcdPageCode4"></div>
+                        </div>
+                    </div>
+                    <div class="height1rem fl"></div>
+                </div>
+            </div>
+            <div class="projectInfoConCr fr">
+
+
+                <div class="projectInfoConCrChild1">
+                    <!-- <div>
+                        <h1>项目发起人</h1>
+                        <div class="projectInfoConCrChild1div">
+                            <div class="projectInfoConCrChild1divl fl">
+                                <div class="bgcenter" style="background-image:url(img/4.jpg)"></div>
+                            </div>
+                            <div class="projectInfoConCrChild1divr fr">
+                                <ul>
+                                    <li class="projectInfoConCrChild1divrli1">林洛雪</li>
+                                    <li class="projectInfoConCrChild1divrli2">用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介用户签名简介</li>
+                                    <li class="projectInfoConCrChild1divrli3">私信</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="clear"></div>
+                <div class="height1rem"></div>
+                <div class="projectInfoConCrChild2">
+                    <div class="explain">
+                        <h2 class="explain-h2">风险提示</h2>
+                        <p class="explain-p">1.&nbsp;众筹并非商品交易，项目存在一定风险，如项目筹款成功但发放回报出现问题，您可申请退款退回支持金额（一次性支付，按项目组织者约定比例以首笔款+尾款方式付至项目组织者账户）中的尾款部分，而首笔款部分由于已被项目组织者使用，退还首笔款事宜需要您与项目组织者自行协商，您可能会承担首笔款无法退回的损失。后期如对项目组织者的处理仍有疑问，可申请淘宝客服介入。</p>
+                        <p class="explain-p">2.&nbsp;请在支持项目后15分钟内付款哦，否则您的支持请求会被自动关闭。</p>
+                        <p class="explain-p">3.&nbsp;本页面统计的项目总支持人数和总支持金额存在一定的延迟，以单个回报详情为准。 </p>
+                        <b></b>
+                    </div>
+                    <div class="height1rem"></div>
+                    <!-- <ol>
+                        <li class="projectInfoConCrChild2li1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                    <div class="clear"></div>
+                    <div class="height1rem"></div>
+                    <ol>
+                        <li class="projectInfoConCrChild2li1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                    <div class="clear"></div>
+                    <div class="height1rem"></div> -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 弹出窗 -->
+    <div class="supportCon">
+        <div class="supportContent">
+            <div class="supportCon1">
+                <div class="closeSupport fr">&times;</div>
+                <div class="supportxz">选择回报方式</div>
+                <div class="supportOl">
+                    <ol>
+                        <li class="projectInfoConCrChild2li1 supportOl1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2 supportOl2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3 supportOl3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4 supportOl4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li class="projectInfoConCrChild2li1 supportOl1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2 supportOl2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3 supportOl3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4 supportOl4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li class="projectInfoConCrChild2li1 supportOl1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2 supportOl2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3 supportOl3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4 supportOl4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                    <ol>
+                        <li class="projectInfoConCrChild2li1 supportOl1">￥<span>1234</span></li>
+                        <li class="projectInfoConCrChild2li2 supportOl2">标题标题标题标题</li>
+                        <li class="projectInfoConCrChild2li3 supportOl3">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</li>
+                        <li class="projectInfoConCrChild2li4 supportOl4">
+                            <span>支持</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+
+</html>

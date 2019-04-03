@@ -1,0 +1,6 @@
+html{width: 100%;height: 100%}
+body{padding: 0 1rem;background: white}
+.tdImg{width: 20%}
+.tdImg>img{width: 100%}
+.listTablePhoto{width: 98%;
+    margin: 0 auto;}

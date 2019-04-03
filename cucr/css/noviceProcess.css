@@ -1,0 +1,29 @@
+dl,dd{margin-bottom: 0}
+.noviceCon{margin-top: 1rem;margin-bottom: 1rem; min-height: 654px;}
+.noviceConl{width: 24%;display: inline;float: left;background: white}
+.noviceConr{width: 74%;display: inline;float: right;background: white}
+.noviceConl dl,.noviceConl dl dd{width: 100%}
+.noviceConl>dl{padding: 2rem 0}
+.noviceConl>dl>dd{    padding: .3rem 0;
+    text-indent: 34px;
+    font-size: 1rem;
+    cursor: pointer;}
+.noviceSelect{    border-left: 4px solid #ad8f5f;
+    text-indent: 30px!important;}
+.noviceConr2,.noviceConr3{display: none}
+.madiv{margin-bottom: -1rem}
+.noviceConr1,.noviceConr2,.noviceConr3{    padding: 20px 20px 100px 20px;}
+.novice1h4{color: #ad8f5f;
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 10px;}
+.novice1ul>li>b{font-size: 14px;
+    color: #666;}
+.novice1ul>li{font-size: 14px;
+    color: #888;}
+.novice1ul>li:nth-child(odd){
+    margin-top: .8rem
+}
+.novice1ul>li:nth-child(even){
+    margin-bottom: 1.2rem
+}

@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../css/bootstrap.css">
+    <link rel="stylesheet" href="./../../css/common.css">
+    <link rel="stylesheet" href="./../../css/personal.css">
+    <script src="static/admin/js/jquery1.8.3.js"></script>
+    <script src="static/admin/js/requestDefinition.js"></script>
+    <script src="static/admin/js/requestDefinition.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <link rel="stylesheet" href="./../../css/projectRaise.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <style>
+    input,textarea{pointer-events:none;}
+    </style>
+</head>
+<body>
+    <div class="container aProject" style="display:block">
+        <div class="aProjectdiv1 auditCon">
+            项目众筹
+        </div>
+        <div class="aProjectdiv2">
+            <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目名称</span>
+                    <input class="name" type="text" value="">
+                </dd>
+                <dd>
+                    <span>项目所在地</span>
+                    <input class="region" onclick="regionClick()" type="text" readonly="readonly">
+                    <dl class="dlregion1"></dl>
+                    <!-- 省份和城市 -->
+                    <input type="hidden" class="provinceid">
+                    <input type="hidden" class="cityid">
+                </dd>
+                <dd>
+                    <span class="fl">项目封面</span>
+                    <img style="width:8rem" class="auditPhoto" alt="">
+                </dd>
+                <dd style="display:none">
+                    <span>项目视频</span>
+                    <input class="videoid" type="text">
+                </dd>
+                <dd>
+                    <span>简要说明</span>
+                    <input class="explain" type="text">
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目筹资金额</span>
+                    <input class="amount" onchange="amountChange()" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">元
+                </dd>
+                <dd>
+                    <span>开始时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon startTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>截止时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon endTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>项目分类</span>
+                    <div class="cftypeDiv">
+                    </div>
+                </dd>
+                <dd>
+                    <span>项目标签</span>
+                    <input class="lable" type="text">
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目详情</span>
+                    <!-- <textarea class="details" name="" id="" cols="30" rows="10"></textarea> -->
+                     <script id="editor" type="text/plain" style="width:824px;height:500px;"></script>
+                    <div id="btns">
+                        <button onclick="getContent()">获得内容</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+        </div>
+        <div  class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>选择项目回报方式</span>
+                </dd>
+                <dd>
+                    <span>成功回报时间</span>
+                    <input class="laydate-icon repaidday">
+                </dd>
+                <dd class="material">
+                    <span>实物回报</span>
+                    <input  class="materialPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+                <dd class="quota">
+                    <span>定额回报</span>
+                    <input  class="quotaPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+                <dd class="stock">
+                    <span>股份回报</span>
+                    <input class="stockPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+        </div>
+        <div class="aProjectdiv3">
+            <dl class="materialDl">
+                <dd style="margin-bottom: 2rem;">
+                    <span>设置回报份额</span>
+                </dd>
+                <dd>
+                    <span class="spanAuto">实物回报：<em class="materialSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount1"></em>元</span>
+                </dd>
+                <dd>
+                    <span>限份额</span>
+                    <input class="material1 materialNumber"  type="text">
+                </dd>
+                <dd>
+                    <span>单份实物金额</span>
+                    <input readonly="readonly" class="material2 materialPrice" type="text">
+                </dd>
+                <dd>
+                    <span>实物回报标题</span>
+                    <input class="material3 materialTitle" type="text">
+                </dd>
+                <dd>
+                    <span>实物回报详情说明</span>
+                    <textarea class="material4 materialExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+            <dl class="quotaDl">
+                <dd>
+                    <span class="spanAuto">定额回报：<em class="quotaSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount2"></em>元</span>
+                </dd>
+                <dd>
+                    <span>限份额</span>
+                    <input  class="quota1 quotaNumber"  type="text">
+                </dd>
+                <dd>
+                    <span>单份定额金额</span>
+                    <input readonly="readonly" class="quota2 quotaPrice" type="text">
+                </dd>
+                <dd>
+                    <span>单份回报金额</span>
+                    <input class="quotaRepay quota3" type="text">
+                </dd>
+                <dd>
+                    <span>定额回报标题</span>
+                    <input  class="quota4 quotaTitle" type="text">
+                </dd>
+                <dd>
+                    <span>定额回报详情说明</span>
+                    <textarea class="quota5 quotaExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+            <div class="height2rem"></div>
+            <dl class="stockDl">
+                <dd>
+                    <span class="spanAuto">股份回报：<em class="stockSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount3"></em>元</span>
+                </dd>
+                <dd>
+                    <span>股份回报系数</span>
+                    <input class="stockCoeff" type="text">
+                    <i class="stockI">(例如：股份回报系数是2，支持者支持2000元，可得回报加本金共4000元)</i>
+                </dd>
+                <dd>
+                    <span>股份回报标题</span>
+                    <input class="stockTitle" type="text">
+                </dd>
+                <dd>
+                    <span>股份回报详情说明</span>
+                    <textarea class="stockExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</body>
+</html>
+<script> 
+// 获取父元素传递的参数
+(function ($) {
+  $.getUrlParam = function (name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+  }
+})(jQuery);
+var projectId = $.getUrlParam('projectId');
+var cfType = $.getUrlParam('cfType');
+// console.log(projectId)
+// console.log(cfType)
+/*if(cfType==1){
+    $(".equityCon").hide()
+}
+if(cfType==2){
+    $(".auditCon").hide()
+}*/
+$(function(){
+    var datas={
+        "option":"getProjectInfo",
+        "userId":localStorage.sysUserId,
+        "projectId":projectId
+    };
+    $.ajax({
+        cache:true,
+        url:cucr+"/api/ClzcProject",
+        type:"POST",
+        data:datas,
+        async:true,
+        error:function(request){
+            return;
+        },
+        success:function(data){
+            // console.log(data)
+            $(".totalAmount1").text(data.resData.materialPrice)
+            $(".totalAmount2").text(data.resData.quotaPrice )
+            $(".totalAmount3").text(data.resData.stockPrice )
+            $(".stockPercent").val(data.resData.stockPercent )
+            $(".stockSpan").text(data.resData.stockPercent)
+            $(".quotaPercent").val(data.resData.quotaPercent)
+            $(".quotaSpan").text(data.resData.quotaPercent)
+            $(".materialPercent").val(data.resData.materialPercent)
+            $(".materialSpan").text(data.resData.materialPercent)
+            $(".repaidday").val(data.resData.repayTime)
+            $(".name").val(data.resData.name);
+            $(".amount").val(data.resData.amount);
+            $(".days").val(data.resData.days);
+            var region=data.resData.city+"--"+data.resData.province
+            $(".region").val(region);
+            $(".supportcount").val(data.resData.supportCount);
+            $(".videoid").val(data.resData.videoId);
+            $(".explain").val(data.resData.explain);
+            $(".lable").val(data.resData.lable);
+            $(".startTime").val(data.resData.startTime);
+            $(".endTime").val(data.resData.endTime);
+            $(".details").val(data.resData.details);
+            $(".copies").val(data.resData.copies);
+            $(".single").val(data.resData.single);
+            $(".maxcopies").val(data.resData.maxcopies);
+            $(".repaycoeff").val(data.resData.repaycoeff);
+            $(".bonusmoney").val(data.resData.bonusmoney);
+            $(".content").val(data.resData.content);
+            $(".employeesnum").val(data.resData.employeesnum);
+            $(".pamount").val(data.resData.pamount);
+            $(".shares").val(data.resData.shares);
+            $(".minmoney").val(data.resData.minMoney);
+            $(".sharemoney").val(data.resData.sharemoney);
+            $(".cftypeDiv").text(data.resData.classText);
+            $(".auditPhoto").attr("src",cucr+data.resData.pictureUrl)
+            var isrecomm=data.resData.isrecomm-1;
+            $("input[name=isrecomm]:eq("+isrecomm+")").attr("checked",'checked');
+            var isbonus=data.resData.isbonus-1;
+            $("input[name=isbonus]:eq("+isbonus+")").attr("checked",'checked');
+            var mode=data.resData.mode-1;
+            $("input[name=mode]:eq("+mode+")").attr("checked",'checked');
+            if($("input[name=mode]:checked").val()==1){
+                $(".modeSH").show();
+            }else{
+                $(".modeSH").hide();
+            }
+        }
+    })
+
+    //实物回报具体数据
+    var datas1={
+        "option":"getInfoByProjectId",
+        "userId":localStorage.sysUserId,
+        "projectId":projectId
+    };
+    $.ajax({
+        cache:true,
+        url:cucr+"/api/ClzcProjectMaterial",
+        type:"POST",
+        data:datas1,
+        async:true,
+        error:function(request){
+            return;
+        },
+        success:function(data){
+            // console.log(data)
+            $(".material1").val(data.resData.singleNumber)
+            $(".material2").val(data.resData.singlePrice)
+            $(".material3").val(data.resData.title)
+            $(".material4").val(data.resData.explain)
+        }
+    })
+    //定额回报具体数据
+    var datas2={
+        "option":"getInfoByProjectId",
+        "userId":localStorage.sysUserId,
+        "projectId":projectId
+    };
+    $.ajax({
+        cache:true,
+        url:cucr+"/api/ClzcProjectQuota",
+        type:"POST",
+        data:datas2,
+        async:true,
+        error:function(request){
+            return;
+        },
+        success:function(data){
+            console.log(data)
+            $(".quota1").val(data.resData.singleNumber)
+            $(".quota2").val(data.resData.singlePrice)
+            $(".quota3").val(data.resData.singleRepay)
+            $(".quota4").val(data.resData.title)
+            $(".quota5").val(data.resData.explain)
+        }
+    })
+    //股份回报具体数据
+    var datas3={
+        "option":"getInfoByProjectId",
+        "userId":localStorage.sysUserId,
+        "projectId":projectId
+    };
+    $.ajax({
+        cache:true,
+        url:cucr+"/api/ClzcProjectStock",
+        type:"POST",
+        data:datas3,
+        async:true,
+        error:function(request){
+            return;
+        },
+        success:function(data){
+            // console.log(data)
+            $(".stockCoeff").val(data.resData.coeff)
+            $(".stockTitle").val(data.resData.title)
+            $(".stockExplain").val(data.resData.explain)
+        }
+    })
+})
+</script>

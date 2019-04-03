@@ -1,0 +1,48 @@
+.projects{background: white;height: 60px;margin-top: 1rem}
+.projects dl dd,.projects dl dt{display: inline;height: 2.4rem;line-height: 2.4rem;font-size: 1rem;padding: .2rem 1rem;
+    font-size: .8rem;}
+.projectsdl{    padding: 10px 10px;}
+.projects dl dd,.projects dl dt{cursor: pointer;color: #666;}
+.searchin{ height: 1.2rem;font-size: 1rem;margin-top: .3rem;position: relative;}
+input::-webkit-input-placeholder{
+    font-size: .9rem
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    font-size: .9rem
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    font-size: .9rem
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    font-size: .9rem
+}
+/*a:hover{color: #000!important}*/
+.projectSelect{background: #ad8f5f;
+    color: white!important;
+    border-radius: 30px;}
+.tcdPageCode>a,.tcdPageCode>span{background: white}
+.searchin>span{background: #ad8f5f;
+    height: 26px;
+    display: inline-block;
+    width: 3rem;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    line-height:26px;
+    font-size: .9rem;    border-radius: 0 24px 24px 0;}
+.proInfodd3{height: .3rem;
+    background: #e2d6c6;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: .6rem 0;}
+.rowPagesCon{min-height: 616px}
+.proInfodd3>div{    height: 100%;
+    background: #ad8f5f;} 
+.searchSpan{    position: absolute;
+    top: 15px;
+    right: 0;}
+.searchInput{    border-radius: 20px;
+    border: 1px solid #999;
+    overflow: hidden;
+    text-indent: 16px;
+    width: 222px;height: 26px;margin-top: 15px}

@@ -1,0 +1,142 @@
+nav{background: #f2eee8;height: 3rem;line-height: 3rem;font-size: 1.2rem;color: #666;text-align: center;}
+.span1{color: #666;font-size: 1rem}
+.span2{background: #a89064;
+    color: white;
+    padding: 4px;border-radius: 4px}
+.span2>img{    margin-right: 5px;
+    margin-top: -5px;}
+h5{padding-top: 1rem}
+*{margin: 0;padding: 0}
+/*span{display: inline-block;width: 200px;text-align: right;}*/
+/*input[type="text"],textarea{width: 300px;}*/
+input{border:0 none;font-size:.8rem;
+    color: #666;}
+.fl{float: left;}
+.dd1,.dd2{width:80%;margin-top: 40px;display: inline-block;margin-bottom: 20px;    border: 1px solid #ded2bf;
+    height: 35px;
+    line-height: 35px;
+    background: #fbf9f7;}
+.dd1,.dd2{    margin: 0 auto;
+    display: table;}
+.dd1>span,.dd2>span,.dd3>span,.dd4>span{    width: 70px;
+    display: inline-block;
+    text-align: right;
+    font-size:.8rem;
+    color: #a3a3a3;}
+.dd1>input[type="text"],.dd2>input[type="text"]{    outline: 0 none;
+    height: 35px;
+    line-height: 35px;
+    background: #fbf9f7;
+    text-indent: 1rem;
+    width: 10rem;}
+.dd3>input[type="text"]{    width: 10rem;
+    outline: 0 none;
+    height: 30px;
+    line-height: 30px;
+    background: #fbf9f7;}
+.dd3{    width:80%;
+    margin: 0 auto;
+    border: 1px solid #ded2bf;
+    background: #fbf9f7;
+    height: 35px;
+    line-height: 35px;position: relative;margin-bottom: 20px}
+/*.ddt3>span,.ddt3>input{    margin-top: -15px;
+    float: left;}*/
+.dlregion1{top: 3rem;    width: 520px;
+    right: 0;
+    border: 1px solid #ded2bf;
+    margin-top: 2px;
+    height: 12rem}
+.dlregion1>dd{    padding: 2px 0!important;
+    text-indent: 8px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-bottom: .5rem;
+    height: 30px;}
+.dd4{    width:80%;
+    margin: 0 auto;
+    border: 1px solid #ded2bf;
+    background: #fbf9f7;
+    height: 100px;
+    line-height: 35px;
+    margin-bottom: 20px;}
+.address{    height: 36%;
+    float: left;
+    width: 88%;
+    background: transparent;
+    border: 0 none;
+    resize: none;
+    outline: 0 none;
+    font-size: 18px;
+    color: #666;}
+label{color: #666}
+.ddbtn{    width: 180px;
+    background: #ad8f5f;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-bottom: 20px}
+.dd1,.dd2,.dd3{margin-top: 20px}
+.borderDldd>dd{    border: 1px solid #d3c7b2;}
+.selectAddress{border:2px solid #f19b38!important;}
+.namePhone{    padding-top: .4rem;
+    padding-bottom: .4rem;    border-bottom: 1px solid #d3c7b2;}
+.nameSpan,.phoneSpan{padding: 0 .8rem;
+    font-size: 1rem;
+    color: #000;}
+.addressp{    padding: .4rem .8rem;color: #333}
+.editDelete{    display: inline-block;
+    width: 100%;
+    padding: 0 .8rem;
+    font-style: inherit;margin-bottom: .4rem}
+.editDelete>span{    font-size: .8rem;color: #bbb}
+.editDelete>span:last-child{float: right;}
+html{    height: 100%;
+    background: white;}
+.container{background: white;}
+.navimg{    width: 20vw;
+    height: 20vw;display:inline-block;}
+.navinfo{width: 66vw;
+    display: inline-block;}
+.lili1{width: 100%}
+.navinfo>p{height: 10vw;
+    line-height: 10vw;
+    text-indent: 1rem;}
+.raiseDivCon>ul>li{border-bottom: 1px solid #d3c7ba;clear: both;padding: 1rem 0}
+.heightf6{width: 100%;height: 1rem;background: #fff}
+.heightf66{width: 100%;height: 1rem;background: #f6f6f6}
+h4{    font-size: 1.2rem;
+    margin-bottom: 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid #d3c7ba;}
+.textRights{text-align: right;}
+.textRight{padding: 1rem;
+    text-align: right;
+    color: #bbb;
+    font-size: .4rem;}
+body{position: relative;}
+.subbtn{position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: white;height: 12vw}
+.subbtn>div:first-child{float: left;width: 70vw;height: 100%;background: #f6f6f6!important}
+.subbtn>div:first-child>span{margin-left: 1.2rem}
+.subbtn>div:first-child>input{    width: 25vw;
+    text-align: left;
+    background: #f6f6f6!important;
+    color: #ed7346;
+    font-size: 1.6rem;}
+.subbtn>div:last-child{    float: left;
+    width: 30vw;
+    height: 100%;
+    text-align: center;
+    line-height: 12vw;
+    background: #ed7346;
+    color: white;}
+.raiseDivCon{padding-bottom: 12vw}

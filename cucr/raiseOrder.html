@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>众筹订单</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/raiseOrder.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <script src="js/raiseOrder.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear" >
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor"><a href="index.html">主页</a></li>
+                    <li class="cursor beardActive"><a href="projects.html?userId=10002549">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="head-nav fr">
+                
+            </div>
+        </div>
+    </div>
+    <div class="container raiseCon">
+        <div class="sellPrompt">
+            <h5>商品购买提示</h5>
+            <ul>
+                <li>1. 请在支持项目后15分钟内付款哦，否则您的支持请求会被自动关闭</li>
+                <li>2. 由于众筹并非商品交易，为了保证项目筹款和制作的顺利进行，您成功付款后不能像往常一样直接申请退款哦。如果筹款失败，支持金额中的尾款会全部退回，项目取消。如果筹款成功后，项目没有按照约定执行，支付宝中的尾款会退还给您，退还首笔款事宜需要您与项目组织者自行协商，您可能会承担首笔款无法退回的损失。后期如对项目组织者的处理仍有疑问，可申请淘宝客服介入。</li>
+            </ul>
+        </div>
+        <div class="shipAddress">
+            <div class="bs" style="display:none">
+                <h5>
+                    <span>收货地址</span>
+                    <span class="fr cursor" onclick="addAddress()"><img src="img/addAddressIcon.png" height="14" width="14" alt="">使用新地址</span>
+                </h5>
+                <dl class="container">
+                    <!-- <dd>
+                        <input type="radio" name="address">
+                        <p>湖北省武汉市洪山区书城路（阿皮收）15612345678</p>
+                        <em>
+                            <span>修改地址</span>
+                            <span>删除</span>
+                        </em>
+                    </dd> -->
+                </dl>
+            </div>
+
+            <div class="raiseDivCon">
+                <h4>确认订单信息</h4>
+                <div class="rasieDivTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>众筹项目</td>
+                                <td>众筹类型</td>
+                                <td>众筹单价</td>
+                                <td>众筹份数</td>
+                                <td>众筹总金额</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <input type="hidden" class="bs">
+                            <!-- 实物单份金额 -->
+                            <input type="hidden" class="singlePrice">
+                            <!-- 实物发行份数 -->
+                            <input type="hidden" class="singleNumber">
+                            <tr>
+                                <td class="tdTitle"></td>
+                                <td class="tdLx"></td>
+                                <td class="amountDj"></td>
+                                <td><input onblur="txtfocus()" class="raiseUnit copies"  onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" type="text" value=""></td>
+                                <td>
+                                    <input type="text" readonly="readonly" class="amount">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="noteText">
+                        <span class="fl">备注</span>
+                        <textarea class=""></textarea>
+                    </div>
+                    <div class="rasieInfo">
+                        <p class="textRight">运费：0元</p>
+                        <div class="textRight">
+                            <input type="checkbox" checked="">
+                            我已阅读了解并自愿承担相应风险
+                        </div>
+                        <div class="textRight">
+                            共计支付金额￥
+                            <span class="priceSpan amount"></span>
+                        </div>
+                        <div class="height100"></div>
+                        <div class="subBtn" onclick="subBtn()">
+                            提交订单
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+</html>

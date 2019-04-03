@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <link rel="stylesheet" href="css/addAdmin.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="js/addAdmin.js"></script>
+    <script src="js/jquery.page.js"></script>
+</head>
+<body>
+    <h1 class="navTitle">管理员管理</h1>
+    <div class="addAdminCon">
+        <div>
+            <div class="addAdminConBtn fl" onclick="addUserBtn()">添加</div>
+            <div class="tcdPageCode fr"></div>
+        </div>
+        <table class="listTable" border="1">
+            <thead>
+                <tr>
+                    <td class="textalign">序</td>
+                    <td>用户名</td>
+                    <td>描述</td>
+                    <td>状态</td>
+                    <td>添加时间</td>
+                    <td>操作</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <!-- 分页 -->
+    </div>
+</body>
+</html>

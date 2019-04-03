@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>小创众筹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swipper.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+
+    <script src="js/jquery1.8.3.js"></script>
+
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/laydateN.js"></script>
+
+    <script src="js/index.js"></script>
+    <script src="js/swipper.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+
+    <style>
+        .swiper-container {
+            max-width: 1140px
+        }
+        
+        .proInfodd3 {
+            height: .3rem;
+            background: #e2d6c6;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: .6rem 0;
+        }
+        
+        .proInfodd3>div {
+            height: 100%;
+            background: #ad8f5f;
+        }
+        
+        .swiper-slide {
+            height: 460px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .swiper-button-prev {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ad8f5f'%2F%3E%3C%2Fsvg%3E")
+        }
+        
+        .swiper-button-next {
+            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ad8f5f'%2F%3E%3C%2Fsvg%3E")
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: #ad8f5f
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear">
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html?userId=10002549">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+    <!-- 中间部分 -->
+
+
+    <!-- 轮播图 -->
+    <div class="swiper-container" style="margin-top: 30px;">
+        <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide">
+                <a href="projects.html"></a>
+                <img src="img/1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <a href="news.html"></a>
+                <img src="img/2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <a href="about.html"></a>
+                <img src="img/3.jpg" alt="">
+            </div> -->
+        </div>
+        <!-- 如果需要分页器 -->
+        <div class="swiper-pagination"></div>
+        <!-- 左右按钮 -->
+        <div class="swiper-button-prev swiper_btn"></div>
+        <div class="swiper-button-next swiper_btn"></div>
+    </div>
+    <div class="cumulative container">
+        <dl>
+            <dd class="borderRight">
+                <p class="p666"><span class="ljzcje"></span>元</p>
+                <p class="p999">累计支持金额</p>
+            </dd>
+            <dd class="borderRight">
+                <p class="p666"><span class="ljzcrs"></span>个</p>
+                <p class="p999">累计支持人数</p>
+            </dd>
+            <dd class="borderRight">
+                <p class="p666"><span class="ljtzxm"></span>个</p>
+                <p class="p999">累计投资项目</p>
+            </dd>
+            <dd>
+                <p class="p666"><span class="dbzgczje"></span>元</p>
+                <p class="p999">单项最高筹资金额</p>
+            </dd>
+        </dl>
+    </div>
+
+    <!-- 推荐项目 -->
+    <div class="max12px container tjmore">
+        <div class="noviceDiv">
+            <div class="fl noviceDiv1">
+                <img src="img/noviceDiv1.png" alt="">
+            </div>
+            <div class="fl noviceDiv2" style="background-image:url(img/noviceDiv2.png)">
+                <a href="noviceProcess.html"></a>
+            </div>
+        </div>
+    </div>
+    <div class="index-board-list raiseListHtml container raiseListHtml1">
+        <div class="indexRasie">
+            <p class="fl tjp1">推荐项目</p>
+            <p class="cursor fr tjp2"><a href="projects.html">更多项目</a></p>
+        </div>
+        <div class="row row1">
+            <!-- <div class="index-board-item  col-xl-3" >
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                        <p>众筹中</p>
+                    </div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>项目1</h2>
+                            <h3></h3>
+                            <dl>
+                                <dd>
+                                    <p>15%</p>
+                                    <p>已达</p>
+                                </dd>
+                                <dd>
+                                    <p>100元</p>
+                                    <p>已筹</p>
+                                </dd>
+                                <dd>
+                                    <p>10天</p>
+                                    <p>剩余时间</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- <div class="index-board-item  col-xl-3" >
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                        <p>众筹中</p>
+                    </div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>项目1</h2>
+                            <h3></h3>
+                            <dl>
+                                <dd>
+                                    <p>15%</p>
+                                    <p>已达</p>
+                                </dd>
+                                <dd>
+                                    <p>100元</p>
+                                    <p>已筹</p>
+                                </dd>
+                                <dd>
+                                    <p>10天</p>
+                                    <p>剩余时间</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-3" >
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                        <p>众筹中</p>
+                    </div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>项目1</h2>
+                            <h3></h3>
+                            <dl>
+                                <dd>
+                                    <p>15%</p>
+                                    <p>已达</p>
+                                </dd>
+                                <dd>
+                                    <p>100元</p>
+                                    <p>已筹</p>
+                                </dd>
+                                <dd>
+                                    <p>10天</p>
+                                    <p>剩余时间</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-3" >
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(img/1.jpg)">
+                        <p>众筹中</p>
+                    </div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>项目1</h2>
+                            <h3></h3>
+                            <dl>
+                                <dd>
+                                    <p>15%</p>
+                                    <p>已达</p>
+                                </dd>
+                                <dd>
+                                    <p>100元</p>
+                                    <p>已筹</p>
+                                </dd>
+                                <dd>
+                                    <p>10天</p>
+                                    <p>剩余时间</p>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="indexCon">
+
+    </div>
+
+
+
+    <!-- 新闻资讯 -->
+    <div class="max12px container tjmore">
+        <div>
+            <p class="fl tjp1">新闻资讯</p>
+            <p class="cursor fr tjp2"><a href="news.html">更多新闻</a></p>
+        </div>
+    </div>
+    <div class="index-board-list container">
+        <div class="row">
+            <div class="index-board-item  col-xl-3">
+                <a class="index-board-item-inner flwidth" href="http://www.cucr.cn/index.php/index-view-aid-1235.html" target="_blank">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(http://www.cucr.cn/wcs/Upload/201809/5bac432dbcfae.jpg)"></div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>与军运同行</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="index-board-item  col-xl-3">
+                <a class="index-board-item-inner flwidth" href="http://www.cucr.cn/index.php/index-view-aid-1234.html" target="_blank">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(http://www.cucr.cn/wcs/Upload/201809/5ba0dc49e0264.jpg)"></div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>创联凯尔荣誉上榜</h2>
+                            <!-- <p>2018-08-18</p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="index-board-item  col-xl-3">
+                <a class="index-board-item-inner flwidth" href="http://www.cucr.cn/index.php/index-view-aid-1220.html" target="_blank">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(http://www.cucr.cn/wcs/Upload/201806/5b336cba566d5.jpg)"></div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>悦非空间</h2>
+                            <!-- <p>2018-08-18</p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="index-board-item  col-xl-3">
+                <a class="index-board-item-inner flwidth" href="http://www.cucr.cn/index.php/index-view-aid-1218.html" target="_blank">
+                    <div class="index-board-item-inner-left bgcenter" style="background-image:url(http://www.cucr.cn/wcs/Upload/201806/5b2b10c709dca.jpg)"></div>
+                    <div class="index-board-item-inner-right flwidth">
+                        <div class="index-board-div1">
+                            <h2>星耀中梁 鸿动宜城 </h2>
+                            <!-- <p>2018-08-18</p> -->
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 友情链接 -->
+    <div class="max12px container tjmore displaynone">
+        <div>
+            <p class="fl tjp1">友情链接</p>
+        </div>
+    </div>
+    <div class="index-board-list container displaynone">
+        <div class="row">
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                            <h2 class="textalign">京东金融</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                            <h2 class="textalign">水滴筹</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                            <h2 class="textalign">苏宁众筹</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                            <h2 class="textalign">众筹客</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                            <h2 class="textalign">创联凯尔</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="index-board-item  col-xl-2">
+                <div class="index-board-item-inner flwidth">
+                    <div class="index-board-item-inner-right flwidth">
+                        <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                            <h2 class="textalign">心跳科技</h2>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+
+</html>
+<script src="js/loginSuccess.js"></script>
+<script>
+    /*localStorage.setItem("name","caibin") //存储名字为name值为caibin的变量
+                                        localStorage.name = "caibin"; // 等价于上面的命令
+                                        localStorage // Storage {name: "caibin", length: 1}
+
+
+                                        localStorage.getItem("name") //caibin,读取保存在localStorage对象里名为name的变量的值
+                                        localStorage.name // "caibin"
+                                        localStorage.valueOf() //读取存储在localStorage上的所有数据
+                                        localStorage.key(0) // 读取第一条数据的变量名(键值)
+                                        //遍历并输出localStorage里存储的名字和值
+                                        
+                                        console.log('名字为：'+localStorage.key(i)+',值为：'+localStorage.getItem(localStorage.key(i)));*/
+    // for(var i=0; i<localStorage.length;i++){
+    //     console.log('localStorage里存储的第'+i+'条数据的名字为：'+localStorage.key(i)+',值为：'+localStorage.getItem(localStorage.key(i)));
+    // }
+</script>

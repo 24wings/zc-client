@@ -1,0 +1,596 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>项目众筹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/fileinput.css">
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+    <script src="js/laydate.js"></script>
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <link rel="stylesheet" href="css/projectRaise.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/fileinput.js"></script>
+    <script src="js/projectRaise.js"></script>
+
+
+    <script src="http://192.168.10.39:8890/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="http://192.168.10.39:8890/ueditor.all.min.js"> </script>
+    建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败
+    这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文
+    <script type="text/javascript" charset="utf-8" src="http://192.168.10.39:8890/zh-cn.js"></script>
+<style>
+    #editor{float: left;}
+</style>
+</head>
+<body>
+    头部
+    <div class="app-head clear" >
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="container aProject" style="display:block">
+        <div class="aProjectdiv1">
+            项目众筹
+        </div>
+        <div class="aProjectdiv2">
+            <dl>
+                <dd style="display:none">
+                    <span>筹集天数</span>
+                    <input class="days" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">天
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目名称</span>
+                    <input class="name" type="text" value="">
+                </dd>
+                <dd>
+                    <span>项目所在地</span>
+                    <input class="region" onclick="regionClick()" type="text" readonly="readonly">
+                    <dl class="dlregion1"></dl>
+                    省份和城市
+                    <input type="hidden" class="provinceid">
+                    <input type="hidden" class="cityid">
+                </dd>
+                <dd>
+                    <span class="fl">项目封面</span>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
+                                <div class="fileinput-new thumbnail" style="width: 200px;height: auto;max-height:150px;">
+                                    <img id='picImg' style="width: 100%;height: auto;max-height: 140px;" src="" alt="" />
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                <div>
+                                <span class="btn btn-primary btn-file" style="background: white;border: 0;">
+                                <span class="fileinput-new">选择图片</span>
+                                <span class="fileinput-exists">换一张</span>
+                                    <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png" />
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="uploadSubmit" class="btn btn-info" style="color:#ad8f5f;display: block;text-align: left;text-indent: 9rem;">确定图片</div>
+                    </form>
+                </dd>
+                <dd style="display:none">
+                    <span>项目视频</span>
+                    <input class="videoid" type="text">
+                </dd>
+                <dd>
+                    <span>简要说明</span>
+                    <input class="explain" type="text">
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目筹资金额</span>
+                    <input class="amount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">元
+                </dd>
+                <dd style="display:none">
+                    <span>开始时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon startTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>截止时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon endTime" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>项目分类</span>
+                    <div class="cftypeDiv">
+                    </div>
+                </dd>
+                <dd>
+                    <span>项目标签</span>
+                    <input class="lable" type="text">
+                </dd>
+                <dd>
+                    <span>单人投资最低金额</span>
+                    <input class="minmoney" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">元
+                </dd>
+                <dd>
+                    <span>最大支持人数</span>
+                    <input class="supportcount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">人
+                </dd>
+                <dd style="display:none">
+                    <span>是否推荐项目</span>
+                    <input type="radio" class="isrecomm1" name="isrecomm" value="1"/>
+                    <label>是</label>
+                    <input type="radio" class="isrecomm2" name="isrecomm" value="2" />
+                    <label>否</label> 
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>项目详情</span>
+                    <textarea class="details" name="" id="" cols="30" rows="10"></textarea>
+                     <script id="editor" type="text/plain" style="width:824px;height:500px;"></script>
+                    <div id="btns">
+                        <button onclick="getContent()">获得内容</button>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        <div class="aProjectdiv3">
+            <dl>
+                <dd>
+                    <span>成功回报时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon repaidday" onClick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm:ss'})">
+                </dd>
+                <dd>
+                    <span>回报方式</span>
+                    <input type="radio" class="mode" onclick="modeS()" name="mode" value="1" checked="checked" />
+                    <label>按份回报</label>
+                    <input type="radio" class="mode" onclick="modeH()" name="mode" value="2" />
+                    <label>按出资比例回报</label> 
+                </dd>
+                <dd class="modeSH">
+                    <span>共发布份数</span>
+                    <input type="text" class="copies">
+                </dd>
+                <dd class="modeSH">
+                    <span>单份金额</span>
+                    <input type="text" class="single">
+                </dd>
+                <dd class="modeSH">
+                    <span>单人最大投资份数</span>
+                    <input type="text" class="maxcopies">
+                </dd>
+                <dd>
+                    <span>出资比例回报系数</span>
+                    <input class="repaycoeff" type="text">
+                </dd>
+                <dd>
+                    <span>按份回报金额</span>
+                    <input class="sharemoney" type="text">
+                </dd>
+                <dd>
+                    <span>是否分红</span>
+                    <input type="radio" class="isbonus" name="isbonus" value="1" checked="checked" />
+                    <label>是</label>
+                    <input type="radio" class="isbonus" name="isbonus" value="2" />
+                    <label>否</label> 
+                </dd>
+                <dd>
+                    <span>分红金额</span>
+                    <input class="bonusmoney" type="text">
+                </dd>
+                <dd>
+                    <span>回报内容</span>
+                    <textarea class="content" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+            <div class="raiseSend">
+                <div class="raiseSendBtn cursor" onclick="raiseSendBtnck()">
+                    发布众筹项目
+                </div>
+            </div>
+        </div>
+    </div> 
+    尾部
+    <div class="app-foot">
+        <ul>
+            <li>服务条款</li>
+            <li>|</li>
+            <li>服务协议</li>
+            <li>|</li>
+            <li>免责声明</li>
+            <li>|</li>
+            <li>联系我们</li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>ICP备案12345678</p>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+    function getContent() {
+        var arr = [];
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+
+</script>
+ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>项目众筹</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/personal.css">
+    <link rel="stylesheet" href="css/fileinput.css">
+    <link rel="stylesheet" href="css/laydate.css">
+    <link rel="stylesheet" href="css/laydateN.css">
+    <script src="js/laydateN.js"></script>
+    <script src="js/jquery1.8.3.js"></script>
+    <script src="js/requestDefinition.js"></script>
+
+    <script src="js/loginSuccess.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <link rel="stylesheet" href="css/projectRaise.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <script src="js/fileinput.js"></script>
+    <script src="js/projectRaise.js"></script>
+    <script src="js/base64.js"></script>
+
+
+    <script src="js/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/ueditor/ueditor.all.min.js">
+    </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="js/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/layer/3.1.0/mobile/need/layer.css">
+    <script src="https://cdn.bootcss.com/layer/3.1.0/layer.js"></script>
+    <style>
+        #editor {
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div class="app-head clear">
+        <div class="app-head-inner  container">
+            <div class="app-head-img fl">
+                <a href="index.html"><img src="img/logo.png" alt=""></a>
+            </div>
+            <div class="app-nav fl">
+                <ul class="beard1 fl">
+                    <li class="cursor beardActive"><a href="index.html">主页</a></li>
+                    <li class="cursor"><a href="projects.html">项目</a></li>
+                    <li class="cursor"><a href="news.html">新闻</a></li>
+                    <li class="cursor"><a href="about.html">关于</a></li>
+                </ul>
+            </div>
+            <div class="head-nav fr">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container aProject" style="display:block">
+        <div class="aProjectdiv1">
+            项目众筹
+        </div>
+        <div class="aProjectdiv3 projectA1">
+            <img class="stepImg" src="img/step01.png" alt="">
+            <dl class="borderDl">
+                <dd>
+                    <span>项目名称</span>
+                    <input class="name" type="text" value="">
+                </dd>
+                <dd>
+                    <span>所属公司</span>
+                    <input class="companyName" type="text" value="">
+                </dd>
+                <dd>
+                    <span>项目编号</span>
+                    <input class="projectNo" type="text" value="">
+                </dd>
+                <dd class="dlregion1F">
+                    <span>所在地区</span>
+                    <input class="region" onclick="regionClick()" type="text" readonly="readonly">
+                    <dl class="dlregion1"></dl>
+                    <!-- 省份和城市 -->
+                    <input type="hidden" class="provinceid">
+                    <input type="hidden" class="cityid">
+                </dd>
+                <dd>
+                    <span class="fl">项目封面</span>
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <div class="fileinput fileinput-new" data-provides="fileinput" id="exampleInputUpload">
+                                <div class="fileinput-new thumbnail" style="width: 200px;height: auto;max-height:150px;">
+                                    <img id='picImg' style="width: 100%;height: auto;max-height: 140px;" src="" alt="" />
+                                </div>
+                                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
+                                <div>
+                                    <span class="btn btn-primary btn-file" style="background: white;border: 0;">
+                                <span class="fileinput-new">选择图片</span>
+                                    <span class="fileinput-exists">换一张</span>
+                                    <input type="file" name="pic1" id="picID" accept="image/gif,image/jpeg,image/x-png" />
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div id="uploadSubmit" class="btn btn-info" style="color:#ad8f5f;display: block;text-align: left;text-indent: 9rem;">确定图片</div> -->
+                    </form>
+                </dd>
+                <dd style="display:none">
+                    <span>项目视频</span>
+                    <input class="videoid" type="text">
+                </dd>
+                <dd>
+                    <span>简要说明</span>
+                    <input class="explain" type="text">
+                </dd>
+            </dl>
+            <div class="nextStep" onclick="projectA1btn()">下一步</div>
+            <div class="height10"></div>
+        </div>
+        <div class="aProjectdiv3 projectA2" style="">
+            <img class="stepImg" src="img/step02.png" alt="">
+            <dl class="borderDl">
+                <dd>
+                    <span>项目筹资金额</span>
+                    <input class="amount" onkeyup="this.value=this.value.replace(/[^0-9]/g,'')" onafterpaste="this.value=this.value.replace(/[^0-9]/g,'')" type="text">元
+                </dd>
+                <dd>
+                    <span>开始时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon startTime" onclick="laydate({istime: true,format:'YYYY-MM-DD'})">
+                </dd>
+                <dd>
+                    <span>截止时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon endTime" onclick="laydate({istime: true,format:'YYYY-MM-DD'})">
+                </dd>
+                <dd>
+                    <span>项目分类</span>
+                    <div class="cftypeDiv">
+                    </div>
+                </dd>
+                <dd>
+                    <span>项目标签</span>
+                    <input class="lable" type="text">
+                </dd>
+                <dd>
+                    <span>收入</span>
+                    <input class="income" type="text">
+                </dd>
+                <dd>
+                    <span>成本</span>
+                    <input class="cost" type="text">
+                </dd>
+                <dd class="sya">
+                    <span>收益</span>
+                    <small>2000元</small>
+                </dd>
+                <dd style="height:520px">
+                    <span>项目详情</span>
+                    <!-- <textarea class="details" name="" id="" cols="30" rows="10"></textarea> -->
+                    <script id="editor" type="text/plain" style="width:824px;height:500px;"></script>
+                    <div id="btns">
+                        <button style="display:none" onclick="getContent()">获得内容</button>
+                    </div>
+                </dd>
+
+            </dl>
+            <div class="nextStep" onclick="projectA2btn()">下一步</div>
+            <div class="height10"></div>
+
+        </div>
+        <!-- <div class="aProjectdiv3 projectA3">
+            <img class="stepImg" src="img/step03.png" alt="">
+            <dl class="borderDl">
+                <dd>
+                    <span>项目详情</span>
+                    <textarea class="details" name="" id="" cols="30" rows="10"></textarea>
+                     <script id="editor" type="text/plain" style="width:824px;height:500px;"></script>
+                    <div id="btns">
+                        <button style="display:none" onclick="getContent()">获得内容</button>
+                    </div>
+                </dd>
+            </dl>
+            <div class="nextStep" onclick="projectA3btn()">下一步</div>
+            <div class="height10"></div>
+        </div> -->
+        <div class="aProjectdiv3 projectA4">
+            <img class="stepImg" src="img/step03.png" alt="">
+            <dl class="borderDl">
+                <!-- <dd>
+                    <span>选择项目回报方式</span>
+                </dd> -->
+                <dd style="margin-top: 20px;">
+                    <span>成功回报时间</span>
+                    <input placeholder="请输入日期" class="laydate-icon repaidday" onclick="laydate({istime: true,format:'YYYY-MM-DD'})">
+                </dd>
+                <dd class="material">
+                    <span>实物回报比例</span>
+                    <input class="materialPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+                <dd class="quota">
+                    <span>定额回报比例</span>
+                    <input class="quotaPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+                <dd class="stock">
+                    <span>股份回报比例</span>
+                    <input class="stockPercent" type="text">%
+                    <i class="inheritFont">（占众筹总金额比例）</i>
+                </dd>
+            </dl>
+            <div class="nextStep" onclick="projectA4btn()">下一步</div>
+            <div class="height10"></div>
+        </div>
+        <div class="aProjectdiv3 projectA5">
+            <img class="stepImg" src="img/step04.png" alt="">
+            <dl class="materialDl borderDl" style="padding-bottom:50px">
+                <!-- <dd style="margin-bottom:2rem">
+                    <span>设置回报份额</span>
+                </dd> -->
+                <dd style="margin-bottom:40px">
+                    <span class="spanAuto spanAuto1">实物回报：<em class="materialSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount1"></em>元</span>
+                </dd>
+                <dd>
+                    <span>限份额</span>
+                    <input class="material1 materialNumber" onchange="materialChange()" type="text">
+                </dd>
+                <dd>
+                    <span>单份实物金额</span>
+                    <input readonly="readonly" class="material2 materialPrice" type="text">
+                </dd>
+                <dd>
+                    <span>实物回报标题</span>
+                    <input class="material3 materialTitle" type="text">
+                </dd>
+                <dd>
+                    <span>实物回报详情说明</span>
+                    <textarea class="material4 materialExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+
+            <dl class="quotaDl" style="border-top: 1px solid #ded2bf;padding-top: 50px;padding-bottom:50px">
+                <dd style="margin-bottom:40px">
+                    <span class="spanAuto spanAuto1">定额回报：<em class="quotaSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount2"></em>元</span>
+                </dd>
+                <dd>
+                    <span>限份额</span>
+                    <input class="quota1 quotaNumber" onchange="quotaChange()" type="text">
+                </dd>
+                <dd>
+                    <span>单份定额金额</span>
+                    <input readonly="readonly" class="quota2 quotaPrice" type="text">
+                </dd>
+                <dd>
+                    <span>单份回报金额</span>
+                    <input class="quotaRepay" type="text">
+                </dd>
+                <dd>
+                    <span>定额回报标题</span>
+                    <input class="quota3 quotaTitle" type="text">
+                </dd>
+                <dd>
+                    <span>定额回报详情说明</span>
+                    <textarea class="quota4 quotaExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+
+            <dl class="stockDl" style="border-top: 1px solid #ded2bf;padding-top: 50px;">
+                <dd style="margin-bottom:40px">
+                    <span class="spanAuto spanAuto1">股份回报：<em class="stockSpan"></em>%</span>
+                    <span class="spanAuto">总金额：<em class="totalAmount3"></em>元</span>
+                </dd>
+                <dd>
+                    <span>股份回报系数</span>
+                    <input style="width:400px" class="stockCoeff" type="text">
+                    <i class="stockI">(例如：股份回报系数是2，支持者支持2000元，可得回报加本金共4000元)</i>
+                </dd>
+                <dd>
+                    <span>股份回报标题</span>
+                    <input style="width:400px" class="stockTitle" type="text">
+                </dd>
+                <dd>
+                    <span>股份回报详情说明</span>
+                    <textarea class="stockExplain" name="" id="" cols="30" rows="10"></textarea>
+                </dd>
+            </dl>
+
+            <div class="raiseSend">
+                <div class="raiseSendBtn cursor" onclick="raiseSendBtnck()">
+                    发布众筹项目
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 尾部 -->
+    <div class="app-foot">
+        <p>友情链接</p>
+        <ul>
+            <li>
+                <a href="https://z.jd.com/sceneIndex.html" target="_blank" class="index-board-div1">
+                    京东金融
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://www.shuidichou.com/" class="index-board-div1" target="_blank">
+                    水滴筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://zc.suning.com/" class="index-board-div1" target="_blank">
+                    苏宁众筹
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.zhongchouke.com/" target="_blank" class="index-board-div1">
+                    众筹客
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucr.cn/" target="_blank" class="index-board-div1">
+                    创联凯尔
+                </a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="http://www.cucrxt.com/static/index.html" target="_blank" class="index-board-div1">
+                    心跳科技
+                </a>
+            </li>
+        </ul>
+        <p>心跳互动 版权所有</p>
+        <p>鄂ICP备18007150号</p>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+</script>
